@@ -1,0 +1,9 @@
+{
+     "stores": [
+          {
+               "id": 1,
+               "location": "New York",
+               "type": "store"
+          }
+     ]
+}
