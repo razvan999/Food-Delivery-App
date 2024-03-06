@@ -1,11 +1,14 @@
-#include<iostream>
+#include <iostream>
 #include <fstream>
-#include<list>
+#include <list>
 #include <tuple>
+#include <vector>
 
 #include <nlohmann/json.hpp>
 #include <boost/uuid/uuid_generators.hpp>
 #include <boost/uuid/uuid_io.hpp>
+
+#define MAX_WEIGHT 1000000
 
 using namespace std;
 using json = nlohmann::json;
@@ -49,13 +52,11 @@ struct node
     node_type type;
 };
 
-
-
 class graph
 {
 private:
-    list<node> nodes;
-    list<tuple<int, int>> edges;
+    vector<node> nodes;
+    vector<vector<tuple<int, int>>> edges;
 
     bool initiate_stores(){
         ifstream file(sores_path);
@@ -136,8 +137,7 @@ private:
                 int id_b = edge["id_b"];
                 int weight = edge["weight"];
 
-
-
+                add_edge(id_a, id_b, weight);
             }
         } catch (json::parse_error &e) {
             cerr << "Failed to parse JSON: "<< e.what() << endl;
@@ -148,14 +148,20 @@ private:
     }
 
 public:
-    graph()
-    {
-        cout << "graph created" << endl;
-        if (initiate_stores() && add_customers())
-        {
-            cout << "stores initiated" << endl;
-        }
+    graph() {
+        initiate_stores();
+        add_customers();
 
+        edges.resize(nodes.size());
+    }
+
+    graph(bool flag)
+    {
+        initiate_stores();
+        add_customers();
+
+        edges.resize(nodes.size());
+        add_edges();
         // separare in zone
 
     }
@@ -168,22 +174,83 @@ public:
         }
     }
 
+    void print_edges() {
+        cout << "printing edges" << endl;
 
+        for (int i = 0; i < edges.size(); i++) {
+            cout << "node " << i << " is connected to: ";
+            for (auto edge : edges[i]) {
+                cout << get<0>(edge) << " with weight " << get<1>(edge) << ", ";
+            }
+            cout << endl;
+        }
+    }    
 
+    void add_node(node new_node)
+    {
+        nodes.push_back(new_node);
+    }
 
+    void add_edge(int id_a, int id_b, int weight) {
+        edges[id_a].push_back(make_tuple(id_b, weight));
+        edges[id_b].push_back(make_tuple(id_a, weight));
+    }
 
+    void add(int id_a, int id_b, int weight) {
+        edges[id_a].push_back(make_tuple(id_b, weight));
+    }
 
+    vector<node> get_nodes()
+    {
+        return nodes;
+    }
 
-
-    
+    vector<vector<tuple<int, int>>> get_edges()
+    {
+        return edges;
+    }
 };
 
+graph prim_algorithm(graph Graph){
+// void prim_algorithm(graph Graph){
+    graph mst;
+    vector<node> unvisited = Graph.get_nodes();
+    
+
+    while(unvisited.size() > 1) {
+        node node = unvisited[0];
+        unvisited.erase(unvisited.begin());
+        mst.add_node(node);
+
+        int min_weight = MAX_WEIGHT, id_node = -1;
+        for (int i = 0; i < Graph.get_edges()[node.id].size(); i++){
+            int id = get<0>(Graph.get_edges()[node.id][i]);
+            int weight = get<1>(Graph.get_edges()[node.id][i]);
+
+            if (weight < min_weight){
+                min_weight = weight;
+                id_node = id;
+            }
+        }
+        mst.add_edge(node.id, id_node, min_weight);
+        // mst.add(node.id, id_node, min_weight);
+        // unvisited.erase(unvisited.begin() + id_node);
+    }
+
+    return mst;
+}
+
 int main(){
-    graph Graph;
+    graph Graph(true);
 
-    Graph.print_nodes();
-    cout << "\n\n\n";
+    // Graph.print_nodes();
+    // cout << "\n\n\n";
 
+    // Graph.print_edges();
 
+    graph mst = prim_algorithm(Graph);
+    // prim_algorithm(Graph);
+    mst.print_edges();
+    
     return 0;
 }
