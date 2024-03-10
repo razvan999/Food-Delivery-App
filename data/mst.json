@@ -1,0 +1,115 @@
+{
+    "edges": [
+        {
+            "id_a": 0,
+            "id_b": 1,
+            "weight": 2
+        },
+        {
+            "id_a": 0,
+            "id_b": 2,
+            "weight": 3
+        },
+        {
+            "id_a": 0,
+            "id_b": 3,
+            "weight": 3
+        },
+        {
+            "id_a": 1,
+            "id_b": 0,
+            "weight": 2
+        },
+        {
+            "id_a": 1,
+            "id_b": 2,
+            "weight": 4
+        },
+        {
+            "id_a": 1,
+            "id_b": 4,
+            "weight": 3
+        },
+        {
+            "id_a": 2,
+            "id_b": 0,
+            "weight": 3
+        },
+        {
+            "id_a": 2,
+            "id_b": 1,
+            "weight": 4
+        },
+        {
+            "id_a": 2,
+            "id_b": 3,
+            "weight": 5
+        },
+        {
+            "id_a": 2,
+            "id_b": 4,
+            "weight": 1
+        },
+        {
+            "id_a": 2,
+            "id_b": 5,
+            "weight": 6
+        },
+        {
+            "id_a": 3,
+            "id_b": 0,
+            "weight": 3
+        },
+        {
+            "id_a": 3,
+            "id_b": 2,
+            "weight": 5
+        },
+        {
+            "id_a": 3,
+            "id_b": 5,
+            "weight": 7
+        },
+        {
+            "id_a": 4,
+            "id_b": 1,
+            "weight": 3
+        },
+
+        {
+            "id_a": 4,
+            "id_b": 2,
+            "weight": 1
+        },
+        {
+            "id_a": 4,
+            "id_b": 5,
+            "weight": 8
+        },
+        {
+            "id_a": 5,
+            "id_b": 2,
+            "weight": 6
+        },
+        {
+            "id_a": 5,
+            "id_b": 3,
+            "weight": 7
+        },
+        {
+            "id_a": 5,
+            "id_b": 4,
+            "weight": 8
+        },
+        {
+            "id_a": 5,
+            "id_b": 6,
+            "weight": 9
+        },
+        {
+            "id_a": 6,
+            "id_b": 5,
+            "weight": 9
+        }
+    ]
+}

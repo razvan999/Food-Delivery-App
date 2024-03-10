@@ -89,7 +89,8 @@ private:
     }
 
     bool add_customers(){ //pentru testare
-        ifstream file(customers_path);
+        ifstream file("../data/nodes.json");
+        // ifstream file(customers_path);
         if (!file.is_open()) {
             cerr << "Failed to open file!" << endl;
             return false;
@@ -119,7 +120,8 @@ private:
     }
 
     bool add_edges(){
-        ifstream file(json_data);
+        // ifstream file(json_data);
+        ifstream file("../data/mst.json");
         if (!file.is_open()) {
             cerr << "Failed to open file!" << endl;
             return false;
@@ -137,7 +139,8 @@ private:
                 int id_b = edge["id_b"];
                 int weight = edge["weight"];
 
-                add_edge(id_a, id_b, weight);
+                // add_edge(id_a, id_b, weight);
+                add(id_a, id_b, weight);
             }
         } catch (json::parse_error &e) {
             cerr << "Failed to parse JSON: "<< e.what() << endl;
@@ -211,32 +214,61 @@ public:
     }
 };
 
-graph prim_algorithm(graph Graph){
-// void prim_algorithm(graph Graph){
-    graph mst;
-    vector<node> unvisited = Graph.get_nodes();
-    
+int min_key_index(vector<int> key, vector<bool> mst_set){
+    int min_key = MAX_WEIGHT, min_index = -1;
 
-    while(unvisited.size() > 1) {
-        node node = unvisited[0];
-        unvisited.erase(unvisited.begin());
-        mst.add_node(node);
-
-        int min_weight = MAX_WEIGHT, id_node = -1;
-        for (int i = 0; i < Graph.get_edges()[node.id].size(); i++){
-            int id = get<0>(Graph.get_edges()[node.id][i]);
-            int weight = get<1>(Graph.get_edges()[node.id][i]);
-
-            if (weight < min_weight){
-                min_weight = weight;
-                id_node = id;
-            }
+    for (int i = 0; i < key.size(); i++) {
+        if (mst_set[i] == false && key[i] < min_key) {
+            min_key = key[i];
+            min_index = i;
         }
-        mst.add_edge(node.id, id_node, min_weight);
-        // mst.add(node.id, id_node, min_weight);
-        // unvisited.erase(unvisited.begin() + id_node);
     }
 
+    return min_index;
+}
+
+graph prim_algorithm(graph Graph) {
+    graph mst;
+
+    vector<int> key = vector<int>(Graph.get_nodes().size(), MAX_WEIGHT);
+    vector<bool> mst_set = vector<bool>(Graph.get_nodes().size(), false);
+    vector<int> parent = vector<int>(Graph.get_nodes().size(), -1);
+    key[0] = 0;
+
+    node current_node = Graph.get_nodes()[0];
+    bool flag = false;
+    while (flag == false) {
+        int min_key = min_key_index(key, mst_set);
+        mst_set[min_key] = true;
+        current_node = Graph.get_nodes()[min_key];
+
+
+        for (int i = 0; i < Graph.get_edges()[current_node.id].size(); i++) {
+            int id = get<0>(Graph.get_edges()[current_node.id][i]);
+            int weight = get<1>(Graph.get_edges()[current_node.id][i]);
+
+            if (mst_set[id] == false && weight < key[id]) {
+                key[id] = weight;
+                parent[id] = min_key;
+            }
+        }
+
+        flag = true;
+        for (int i = 0; i < mst_set.size(); i++) {
+            if (mst_set[i] == false) {
+                flag = false;
+                break;
+            }
+        }
+    }
+
+    for (int i = 0; i < parent.size(); i++) {
+        if (parent[i] != -1) {
+            node node = Graph.get_nodes()[i];
+            mst.add_edge(node.id, Graph.get_nodes()[parent[i]].id, key[i]);
+        }
+    }
+    
     return mst;
 }
 
@@ -249,7 +281,6 @@ int main(){
     // Graph.print_edges();
 
     graph mst = prim_algorithm(Graph);
-    // prim_algorithm(Graph);
     mst.print_edges();
     
     return 0;

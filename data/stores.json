@@ -1,7 +1,7 @@
 {
      "stores": [
           {
-               "id": 1,
+               "id": 0,
                "location": "New York",
                "type": "store"
           }
