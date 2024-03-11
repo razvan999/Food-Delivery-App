@@ -16,6 +16,7 @@ using json = nlohmann::json;
 string sores_path = "../data/stores.json";
 string customers_path = "../data/customers.json";
 string json_data = "../data/data.json";
+string graph_output = "../data/graph_output.json";
 
 boost::uuids::uuid generate_uuid()
 {
@@ -272,6 +273,52 @@ graph prim_algorithm(graph Graph) {
     return mst;
 }
 
+void print_graph_to_json(graph mst, string path){
+    json nodes = json::array();
+    for (int i = 0; i < mst.get_nodes().size(); i++) {
+        json node;
+        node["id"] = mst.get_nodes()[i].id;
+        node["uuid"] = boost::uuids::to_string(mst.get_nodes()[i].uuid);
+        node["status"] = mst.get_nodes()[i].status;
+        node["location"] = mst.get_nodes()[i].location.address;
+        if (mst.get_nodes()[i].type == node_type::store) {
+            node["type"] = "store";
+        } else if (mst.get_nodes()[i].type == node_type::customer) {
+            node["type"] = "customer";
+        }
+
+        nodes.push_back(node);
+    }
+
+    json edges = json::array();
+    // for (int i = 0; i < mst.get_edges().size(); i++) {
+
+    //     for (int j = 0; j < mst.get_edges()[i].size(); j++) {
+
+    //     }
+    // }
+
+    json data = {{
+
+
+        "graph", {
+            {"nodes", nodes},
+            {"edges", edges}
+        }}
+    };
+
+    string jsonString = data.dump(4);
+    
+    ofstream outputFile(graph_output);
+    if (outputFile.is_open()) {
+        outputFile << jsonString;
+        outputFile.close();
+    } else {
+        cerr << "Failed to open file!" << endl;
+        return;
+    }
+}
+
 int main(){
     graph Graph(true);
 
@@ -281,7 +328,9 @@ int main(){
     // Graph.print_edges();
 
     graph mst = prim_algorithm(Graph);
-    mst.print_edges();
+    // mst.print_edges();
+
+    print_graph_to_json(mst, graph_output);
     
     return 0;
 }

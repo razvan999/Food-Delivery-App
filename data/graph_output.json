@@ -1,0 +1,56 @@
+{
+    "graph": {
+        "edges": [],
+        "nodes": [
+            {
+                "id": 0,
+                "location": "New York",
+                "status": 0,
+                "type": "store",
+                "uuid": "11141048-92ea-4e28-936d-fca859a15e93"
+            },
+            {
+                "id": 1,
+                "location": "New York",
+                "status": 0,
+                "type": "customer",
+                "uuid": "3c7fcaa4-dd7b-4e9a-99f7-377694e6c59f"
+            },
+            {
+                "id": 2,
+                "location": "New York",
+                "status": 0,
+                "type": "customer",
+                "uuid": "b50eb183-3a01-44c3-a672-9329438370e8"
+            },
+            {
+                "id": 3,
+                "location": "New York",
+                "status": 0,
+                "type": "customer",
+                "uuid": "e0d2a5a2-e44c-4857-883a-ffe40422f12c"
+            },
+            {
+                "id": 4,
+                "location": "New York",
+                "status": 0,
+                "type": "customer",
+                "uuid": "1142e9c4-6416-4359-bf00-e9e7559bfc6d"
+            },
+            {
+                "id": 5,
+                "location": "New York",
+                "status": 0,
+                "type": "customer",
+                "uuid": "6d38296b-2500-4b9c-9e14-e7bfafb384d1"
+            },
+            {
+                "id": 6,
+                "location": "New York",
+                "status": 0,
+                "type": "customer",
+                "uuid": "04679d12-3abf-4b8b-b830-e6a4c81db5dc"
+            }
+        ]
+    }
+}
