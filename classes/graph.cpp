@@ -9,6 +9,7 @@
 #include <boost/uuid/uuid_io.hpp>
 
 #define MAX_WEIGHT 1000000
+#define MAx_INT 1000000
 
 using namespace std;
 using json = nlohmann::json;
@@ -52,7 +53,6 @@ struct node
     node_location location;
     node_type type;
 };
-
 class graph
 {
 private:
@@ -166,8 +166,6 @@ public:
 
         edges.resize(nodes.size());
         add_edges();
-        // separare in zone
-
     }
 
     void print_nodes()
@@ -319,6 +317,51 @@ void print_graph_to_json(graph mst, string path){
     }
 }
 
+int distance_between_nodes(node store, node customer) {
+    return 0;
+}
+
+vector<graph> graph_splitter(graph Graph){ // nu ii gata
+    vector<graph> zones;
+    vector<node> stores;
+
+    for (int i = 0; i < Graph.get_nodes().size(); i++) {
+        if (Graph.get_nodes()[i].type == node_type::store) {
+            stores.push_back(Graph.get_nodes()[i]);
+        }
+    }
+
+    if (stores.size() == 1) {
+        zones.push_back(Graph);
+        return zones;
+    }
+
+    for (int i = 0; i < stores.size(); i++) {
+        graph zone;
+        zone.add_node(stores[i]);
+        zones.push_back(zone);
+    }
+
+    for (int i = 0; i < Graph.get_nodes().size(); i++) {
+        if (Graph.get_nodes()[i].type == node_type::store) {
+            continue;
+        }
+
+        int min_distance = MAx_INT, closest_store_index = -1;
+        for (int j = 0; j < stores.size(); j++) {
+            int distance = distance_between_nodes(stores[j], Graph.get_nodes()[i]);
+            if (distance < min_distance) {
+                min_distance = distance;
+                closest_store_index = j;
+            }
+        }
+
+        zones[closest_store_index].add_node(Graph.get_nodes()[i]);
+    }
+
+    return zones;
+}
+
 int main(){
     graph Graph(true);
 
@@ -327,10 +370,13 @@ int main(){
 
     // Graph.print_edges();
 
-    graph mst = prim_algorithm(Graph);
+    // graph mst = prim_algorithm(Graph);
     // mst.print_edges();
 
-    print_graph_to_json(mst, graph_output);
+    // print_graph_to_json(mst, graph_output);
+
+
+    vector<graph> zones = graph_splitter(Graph);
     
     return 0;
 }
