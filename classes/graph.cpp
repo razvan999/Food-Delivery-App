@@ -14,9 +14,9 @@
 using namespace std;
 using json = nlohmann::json;
 
-string sores_path = "../data/stores.json";
-string customers_path = "../data/customers.json";
-string json_data = "../data/data.json";
+string sores_path = "../data/NN/stores.json";
+string customers_path = "../data/NN/customers.json";
+string json_data = "../data/NN/data.json";
 string graph_output = "../data/graph_output.json";
 
 boost::uuids::uuid generate_uuid()
@@ -90,8 +90,7 @@ private:
     }
 
     bool add_customers(){ //pentru testare
-        ifstream file("../data/nodes.json");
-        // ifstream file(customers_path);
+        ifstream file(customers_path);
         if (!file.is_open()) {
             cerr << "Failed to open file!" << endl;
             return false;
@@ -121,8 +120,7 @@ private:
     }
 
     bool add_edges(){
-        // ifstream file(json_data);
-        ifstream file("../data/mst.json");
+        ifstream file(json_data);
         if (!file.is_open()) {
             cerr << "Failed to open file!" << endl;
             return false;
@@ -288,7 +286,7 @@ void print_graph_to_json(graph mst, string path){
         nodes.push_back(node);
     }
 
-    json edges = json::array();
+    // json edges = json::array();
     // for (int i = 0; i < mst.get_edges().size(); i++) {
 
     //     for (int j = 0; j < mst.get_edges()[i].size(); j++) {
@@ -301,7 +299,7 @@ void print_graph_to_json(graph mst, string path){
 
         "graph", {
             {"nodes", nodes},
-            {"edges", edges}
+            {"edges", "edges"}
         }}
     };
 
@@ -362,21 +360,67 @@ vector<graph> graph_splitter(graph Graph){ // nu ii gata
     return zones;
 }
 
+
+
+
+
+bool all_visited(vector<bool> visited) {
+    for (int i = 0; i < visited.size(); i++) {
+        if (visited[i] == false) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+void nearest_neighbor(graph Graph) {
+    graph newGraph;
+    vector<node> nodes = Graph.get_nodes();
+    vector<bool> visited = vector<bool>(nodes.size(), false);
+
+    node current_node = nodes[0];
+    // newGraph.add_node(current_node);
+
+    while (!all_visited(visited)) {
+        visited[current_node.id] = true;
+
+        int min_weight = MAX_WEIGHT, next_node_index = -1;
+        vector<tuple<int, int>> edges = vector<tuple<int, int>>(Graph.get_edges()[current_node.id]);
+        for (int i = 0; i < edges.size(); i++) {
+            if (visited[get<0>(edges[i])] == false && get<1>(edges[i]) < min_weight) {
+                min_weight = get<1>(edges[i]);
+                next_node_index = get<0>(edges[i]);
+            }
+        }
+        if (next_node_index != -1) {
+            // newGraph.add_node(nodes[next_node_index]);
+            newGraph.add_edge(current_node.id, next_node_index, min_weight);
+            current_node = nodes[next_node_index];
+        }
+        else{
+            if (current_node.id == 8) {
+                continue;
+            }
+
+            newGraph.add_edge(current_node.id, 2, 10);
+            current_node = nodes[2];
+        }
+
+    }
+
+    newGraph.print_edges();
+}
+
 int main(){
     graph Graph(true);
 
     // Graph.print_nodes();
     // cout << "\n\n\n";
-
     // Graph.print_edges();
 
-    // graph mst = prim_algorithm(Graph);
-    // mst.print_edges();
 
-    // print_graph_to_json(mst, graph_output);
-
-
-    vector<graph> zones = graph_splitter(Graph);
+    nearest_neighbor(Graph);
     
     return 0;
 }
