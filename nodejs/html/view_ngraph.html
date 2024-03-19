@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample HTML Document</title>
+
+    <style>
+        .node {
+            fill: #ccc;
+            stroke: #333;
+            stroke-width: 2px;
+        }
+        .link {
+            stroke: #999;
+            stroke-width: 1.5px;
+        }
+    </style>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+
+    <h3>Graph NN</h3>
+    <svg id="graph"></svg>
+
+    <script>
+        const json = {
+            "graph": {
+                "edges": [],
+                "nodes": [
+                    {"id":"0","location":"New York","status":0,"type":"store","uuid":"11141048-92ea-4e28-936d-fca859a15e93"},
+                    {"id":1,"location":"New York","status":0,"type":"customer","uuid":"3c7fcaa4-dd7b-4e9a-99f7-377694e6c59f"},
+                    {"id":2,"location":"New York","status":0,"type":"customer","uuid":"b50eb183-3a01-44c3-a672-9329438370e8"},
+                    {"id":3,"location":"New York","status":0,"type":"customer","uuid":"e0d2a5a2-e44c-4857-883a-ffe40422f12c"},
+                    {"id":4,"location":"New York","status":0,"type":"customer","uuid":"1142e9c4-6416-4359-bf00-e9e7559bfc6d"},
+                    {"id":5,"location":"New York","status":0,"type":"customer","uuid":"6d38296b-2500-4b9c-9e14-e7bfafb384d1"},
+                    {"id":6,"location":"New York","status":0,"type":"customer","uuid":"04679d12-3abf-4b8b-b830-e6a4c81db5dc"}
+                ]
+            }
+        };
+
+        const nodes = json.graph.nodes;
+        const edges = [];
+
+        const width = 600;
+        const height = 400;
+
+        const svg = d3.select("#graph-container")
+            .attr("width", width)
+            .attr("height", height);
+
+        const simulation = d3.forceSimulation(nodes)
+            .force("link", d3.forceLink(edges).id(d => d.id))
+            .force("charge", d3.forceManyBody())
+            .force("center", d3.forceCenter(width / 2, height / 2));
+
+        const link = svg.selectAll(".link")
+            .data(edges)
+            .enter().append("line")
+            .attr("class", "link");
+
+        const node = svg.selectAll(".node")
+            .data(nodes)
+            .enter().append("circle")
+            .attr("class", "node")
+            .attr("r", 10);
+
+        node.append("title")
+            .text(d => d.id);
+
+        simulation.on("tick", () => {
+            link
+                .attr("x1", d => d.source.x)
+                .attr("y1", d => d.source.y)
+                .attr("x2", d => d.target.x)
+                .attr("y2", d => d.target.y);
+
+            node
+                .attr("cx", d => d.x)
+                .attr("cy", d => d.y);
+        });
+    </script>
+
+</body>
+</html>
