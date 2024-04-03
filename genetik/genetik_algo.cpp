@@ -13,6 +13,8 @@
 
 #define population_size 10
 #define iteratii 200
+#define mutation_prob 0.1
+#define crossover_prob 0.6
 
 using namespace std;
 
@@ -24,6 +26,14 @@ struct Solution {
     Individ individ;
     float score = -1;
 };
+
+float get_random_01() {
+    random_device r;
+    mt19937 gen(r());
+    uniform_real_distribution<> distrib(0, 1);
+
+    return distrib(r);
+}
 
 int get_random_int(int max, int min = 1) {
     random_device rd;
@@ -90,9 +100,6 @@ float calculate_distance(Individ individ, graph g, Vehicles vehicles) {
 
     return distance;
 }
-
-
-
 
 void selection(Population &pop, graph g, vector<courier> vehicles) {
     // Population new_population;
@@ -166,7 +173,23 @@ void crossover(Population &mating_pool, graph g, vector<courier> vehicles) {
         Individ parent2 = mating_pool[get_random_int(mating_pool.size() - 1)];
 
         Individ child;
-        
+        // fac un cut pentru fiecare curier
+        int k = 0, z = 0;
+        for (auto vehicle : vehicles) {
+            int vehicle_id_1 = parent1[k++];
+            int vehicle_id_2 = parent2[z++];
+            int vehicle_stops_1 = parent1[k++];
+            int vehicle_stops_2 = parent2[z++];
+
+            // int cut_parent1 = get_random_int(vehicle_stops_1 - 1, k);
+            // int cut_parent2 = get_random_int(vehicle_stops_2 - 1, z);
+
+
+
+            k += vehicle_stops_1;
+            z += vehicle_stops_2;
+        }
+
 
         new_population.push_back(child);
     }
@@ -174,8 +197,31 @@ void crossover(Population &mating_pool, graph g, vector<courier> vehicles) {
     mating_pool = new_population;
 }
 
-void mutation() {
+void mutation(Population &pop, graph g, vector<courier> vehicles) {
+    for (int i = 0; i < pop.size(); i++) {
+        if (get_random_01() < mutation_prob) {
+            int random_vehicle = get_random_int(vehicles.size() - 1);
+            int k = 1, kk = 0;
+            for (int j = 0; j < random_vehicle; j++) {
+                k += pop[i][k] + 1;
+            }
+            if (random_vehicle == vehicles.size() - 1) {
+                kk = pop[i].size();
+            }
+            else {
+                kk = k + pop[i][k] + 1;
+            }
 
+            // sunt la vehiculul random si interschimb 2 nodduri
+            int index_nod_1 = get_random_int(kk, k);
+            int index_nod_2;
+            do {
+                index_nod_2 = get_random_int(kk, k);
+            } while(index_nod_1 == index_nod_2);
+            
+            swap(pop[i][index_nod_1], pop[i][index_nod_2]);
+        }
+    }
 }
 
 
@@ -191,8 +237,8 @@ Solution genetic_algorithm(Population &pop, graph g, vector<courier> vehicles) {
     for (int i = 0; i < iteratii; i++) {
 
         selection(pop, g, vehicles);
-        crossover(pop, g, vehicles);
-        mutation();
+        // crossover(pop, g, vehicles);
+        // mutation(pop, g, vehicles);
     }
 
     return sol;
