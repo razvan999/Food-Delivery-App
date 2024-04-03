@@ -1,0 +1,204 @@
+<!-- 
+const data = {
+  nodes: [
+    {id: 0, location: "New York", type: "store"},
+    {id: 1, location: "New York", type: "customer"},
+    {id: 2, location: "New York", type: "customer"},
+    {id: 3, location: "New York", type: "customer"},
+    {id: 4, location: "New York", type: "customer"},
+    {id: 5, location: "New York", type: "customer"},
+    {id: 6, location: "New York", type: "customer"},
+    {id: 7, location: "New York", type: "customer"},
+    {id: 8, location: "New York", type: "customer"},
+    {id: 9, location: "New York", type: "customer"},
+    {id: 10, location: "New York", type: "customer"}
+  ],
+  edges: [
+    {id_a: 0, id_b: 1, weight: 8},
+    {id_a: 0, id_b: 9, weight: 11},
+    {id_a: 0, id_b: 8, weight: 9},
+    {id_a: 1, id_b: 0, weight: 8},
+    {id_a: 1, id_b: 2, weight: 7},
+    {id_a: 1, id_b: 9, weight: 6},
+    {id_a: 2, id_b: 1, weight: 7},
+    {id_a: 2, id_b: 9, weight: 4},
+    {id_a: 2, id_b: 3, weight: 10},
+    {id_a: 2, id_b: 4, weight: 9},
+    {id_a: 2, id_b: 5, weight: 11},
+    {id_a: 3, id_b: 2, weight: 10},
+    {id_a: 3, id_b: 4, weight: 7},
+    {id_a: 4, id_b: 2, weight: 9},
+    {id_a: 4, id_b: 3, weight: 7},
+    {id_a: 4, id_b: 5, weight: 14},
+    {id_a: 5, id_b: 2, weight: 11},
+    {id_a: 5, id_b: 4, weight: 14},
+    {id_a: 5, id_b: 9, weight: 14},
+    {id_a: 5, id_b: 8, weight: 17},
+    {id_a: 5, id_b: 6, weight: 11},
+    {id_a: 6, id_b: 5, weight: 11},
+    {id_a: 6, id_b: 7, weight: 9},
+    {id_a: 7, id_b: 6, weight: 9},
+    {id_a: 7, id_b: 9, weight: 15},
+    {id_a: 7, id_b: 8, weight: 10},
+    {id_a: 8, id_b: 7, weight: 10},
+    {id_a: 8, id_b: 0, weight: 9},
+    {id_a: 8, id_b: 9, weight: 11},
+    {id_a: 8, id_b: 5, weight: 17},
+    {id_a: 9, id_b: 0, weight: 11},
+    {id_a: 9, id_b: 1, weight: 6},
+    {id_a: 9, id_b: 2, weight: 4},
+    {id_a: 9, id_b: 5, weight: 14},
+    {id_a: 9, id_b: 7, weight: 15},
+    {id_a: 9, id_b: 8, weight: 11}
+  ]
+};
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graph Visualization</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+      .node {
+        fill: #1f77b4;
+        stroke: #fff;
+      }
+      .edge {
+        stroke: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="800" height="600"></svg>
+
+    <script>
+      const data = {
+        nodes: [
+          { id: 0, location: "New York", type: "store" },
+          { id: 1, location: "New York", type: "customer" },
+          { id: 2, location: "New York", type: "customer" },
+          { id: 3, location: "New York", type: "customer" },
+          { id: 4, location: "New York", type: "customer" },
+          { id: 5, location: "New York", type: "customer" },
+          { id: 6, location: "New York", type: "customer" },
+          { id: 7, location: "New York", type: "customer" },
+          { id: 8, location: "New York", type: "customer" },
+          { id: 9, location: "New York", type: "customer" },
+          { id: 10, location: "New York", type: "customer" },
+        ],
+        edges: [
+          { id_a: 0, id_b: 1, weight: 8 },
+          { id_a: 0, id_b: 9, weight: 11 },
+          { id_a: 0, id_b: 8, weight: 9 },
+          { id_a: 1, id_b: 0, weight: 8 },
+          { id_a: 1, id_b: 2, weight: 7 },
+          { id_a: 1, id_b: 9, weight: 6 },
+          { id_a: 2, id_b: 1, weight: 7 },
+          { id_a: 2, id_b: 9, weight: 4 },
+          { id_a: 2, id_b: 3, weight: 10 },
+          { id_a: 2, id_b: 4, weight: 9 },
+          { id_a: 2, id_b: 5, weight: 11 },
+          { id_a: 3, id_b: 2, weight: 10 },
+          { id_a: 3, id_b: 4, weight: 7 },
+          { id_a: 4, id_b: 2, weight: 9 },
+          { id_a: 4, id_b: 3, weight: 7 },
+          { id_a: 4, id_b: 5, weight: 14 },
+          { id_a: 5, id_b: 2, weight: 11 },
+          { id_a: 5, id_b: 4, weight: 14 },
+          { id_a: 5, id_b: 9, weight: 14 },
+          { id_a: 5, id_b: 8, weight: 17 },
+          { id_a: 5, id_b: 6, weight: 11 },
+          { id_a: 6, id_b: 5, weight: 11 },
+          { id_a: 6, id_b: 7, weight: 9 },
+          { id_a: 7, id_b: 6, weight: 9 },
+          { id_a: 7, id_b: 9, weight: 15 },
+          { id_a: 7, id_b: 8, weight: 10 },
+          { id_a: 8, id_b: 7, weight: 10 },
+          { id_a: 8, id_b: 0, weight: 9 },
+          { id_a: 8, id_b: 9, weight: 11 },
+          { id_a: 8, id_b: 5, weight: 17 },
+          { id_a: 9, id_b: 0, weight: 11 },
+          { id_a: 9, id_b: 1, weight: 6 },
+          { id_a: 9, id_b: 2, weight: 4 },
+          { id_a: 9, id_b: 5, weight: 14 },
+          { id_a: 9, id_b: 7, weight: 15 },
+          { id_a: 9, id_b: 8, weight: 11 },
+        ],
+      };
+
+      const svg = d3.select("svg");
+      const nodes = Array.from(data.nodes);
+      const nodeById = new Map(nodes.map((node) => [node.id, node]));
+
+      const links = data.edges.map((link) => ({
+        ...link,
+        source: nodeById.get(link.id_a),
+        target: nodeById.get(link.id_b),
+      }));
+
+      const simulation = d3
+        .forceSimulation(nodes)
+        .force(
+          "link",
+          d3.forceLink(links).id((d) => d.id)
+        )
+        .force("charge", d3.forceManyBody())
+        .force("center", d3.forceCenter(400, 300));
+
+      const link = svg
+        .selectAll(".edge")
+        .data(links)
+        .enter()
+        .append("line")
+        .attr("class", "edge")
+        .style("stroke-width", (d) => Math.sqrt(d.weight));
+
+      const node = svg
+        .selectAll(".node")
+        .data(nodes)
+        .enter()
+        .append("circle")
+        .attr("class", "node")
+        .attr("r", 5)
+        .call(
+          d3
+            .drag()
+            .on("start", dragstarted)
+            .on("drag", dragged)
+            .on("end", dragended)
+        );
+
+      node.append("title").text((d) => d.id);
+
+      simulation.on("tick", () => {
+        link
+          .attr("x1", (d) => d.source.x)
+          .attr("y1", (d) => d.source.y)
+          .attr("x2", (d) => d.target.x)
+          .attr("y2", (d) => d.target.y);
+
+        node.attr("cx", (d) => d.x).attr("cy", (d) => d.y);
+      });
+
+      function dragstarted(event, d) {
+        if (!event.active) simulation.alphaTarget(0.3).restart();
+        d.fx = d.x;
+        d.fy = d.y;
+      }
+
+      function dragged(event, d) {
+        d.fx = event.x;
+        d.fy = event.y;
+      }
+
+      function dragended(event, d) {
+        if (!event.active) simulation.alphaTarget(0);
+        d.fx = null;
+        d.fy = null;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+{
+    "vehicles": [
+        {
+            "id": 0,
+            "first_name": "A",
+            "last_name": "",
+            "phone_number": "",
+            "email": "",
+            "max_capacity": 0,
+            "location": {
+                "x": 20,
+                "y": 20
+            },
+            "zone": ""
+        },
+        {
+            "id": 1,
+            "first_name": "B",
+            "last_name": "",
+            "phone_number": "",
+            "email": "",
+            "max_capacity": 0,
+            "location": {
+                "x": 30,
+                "y": 40
+            },
+            "zone": ""
+        },
+        {
+            "id": 2,
+            "first_name": "C",
+            "last_name": "",
+            "phone_number": "",
+            "email": "",
+            "max_capacity": 0,
+            "location": {
+                "x": 50,
+                "y": 30
+            },
+            "zone": ""
+        },
+        {
+            "id": 3,
+            "first_name": "D",
+            "last_name": "",
+            "phone_number": "",
+            "email": "",
+            "max_capacity": 0,
+            "location": {
+                "x": 60,
+                "y": 50
+            },
+            "zone": ""
+        }
+    ]
+}

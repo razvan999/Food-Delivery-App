@@ -1,0 +1,427 @@
+[
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -o CMakeFiles/test_main.dir/src/unit.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-algorithms_cpp11.dir/src/unit-algorithms.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-algorithms.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-algorithms.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-allocator_cpp11.dir/src/unit-allocator.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-allocator.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-allocator.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-alt-string_cpp11.dir/src/unit-alt-string.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-alt-string.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-alt-string.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-assert_macro_cpp11.dir/src/unit-assert_macro.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-assert_macro.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-assert_macro.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-binary_formats_cpp11.dir/src/unit-binary_formats.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-binary_formats.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-binary_formats.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-bjdata_cpp11.dir/src/unit-bjdata.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-bjdata.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-bjdata.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-bson_cpp11.dir/src/unit-bson.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-bson.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-bson.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-byte_container_with_subtype_cpp11.dir/src/unit-byte_container_with_subtype.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-byte_container_with_subtype.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-byte_container_with_subtype.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-capacity_cpp11.dir/src/unit-capacity.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-capacity.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-capacity.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-cbor_cpp11.dir/src/unit-cbor.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-cbor.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-cbor.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-class_const_iterator_cpp11.dir/src/unit-class_const_iterator.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-class_const_iterator.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-class_const_iterator.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-class_iterator_cpp11.dir/src/unit-class_iterator.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-class_iterator.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-class_iterator.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-class_lexer_cpp11.dir/src/unit-class_lexer.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-class_lexer.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-class_lexer.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-class_parser_cpp11.dir/src/unit-class_parser.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-class_parser.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-class_parser.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-comparison_cpp11.dir/src/unit-comparison.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-comparison.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-comparison.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++20 -o CMakeFiles/test-comparison_cpp20.dir/src/unit-comparison.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-comparison.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-comparison.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-concepts_cpp11.dir/src/unit-concepts.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-concepts.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-concepts.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-constructor1_cpp11.dir/src/unit-constructor1.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-constructor1.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-constructor1.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-constructor2_cpp11.dir/src/unit-constructor2.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-constructor2.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-constructor2.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-convenience_cpp11.dir/src/unit-convenience.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-convenience.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-convenience.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-conversions_cpp11.dir/src/unit-conversions.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-conversions.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-conversions.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++17 -o CMakeFiles/test-conversions_cpp17.dir/src/unit-conversions.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-conversions.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-conversions.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-custom-base-class_cpp11.dir/src/unit-custom-base-class.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-custom-base-class.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-custom-base-class.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-deserialization_cpp11.dir/src/unit-deserialization.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-deserialization.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-deserialization.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-diagnostics_cpp11.dir/src/unit-diagnostics.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-diagnostics.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-diagnostics.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_NOEXCEPTION -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -fno-exceptions -std=gnu++11 -o CMakeFiles/test-disabled_exceptions_cpp11.dir/src/unit-disabled_exceptions.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-disabled_exceptions.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-disabled_exceptions.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-element_access1_cpp11.dir/src/unit-element_access1.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-element_access1.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-element_access1.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-element_access2_cpp11.dir/src/unit-element_access2.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-element_access2.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-element_access2.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++14 -o CMakeFiles/test-element_access2_cpp14.dir/src/unit-element_access2.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-element_access2.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-element_access2.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++17 -o CMakeFiles/test-element_access2_cpp17.dir/src/unit-element_access2.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-element_access2.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-element_access2.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-hash_cpp11.dir/src/unit-hash.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-hash.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-hash.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-inspection_cpp11.dir/src/unit-inspection.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-inspection.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-inspection.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-items_cpp11.dir/src/unit-items.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-items.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-items.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++17 -o CMakeFiles/test-items_cpp17.dir/src/unit-items.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-items.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-items.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-iterators1_cpp11.dir/src/unit-iterators1.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-iterators1.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-iterators1.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-iterators2_cpp11.dir/src/unit-iterators2.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-iterators2.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-iterators2.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++20 -o CMakeFiles/test-iterators2_cpp20.dir/src/unit-iterators2.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-iterators2.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-iterators2.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-json_patch_cpp11.dir/src/unit-json_patch.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-json_patch.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-json_patch.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-json_pointer_cpp11.dir/src/unit-json_pointer.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-json_pointer.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-json_pointer.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++20 -o CMakeFiles/test-json_pointer_cpp20.dir/src/unit-json_pointer.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-json_pointer.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-json_pointer.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-large_json_cpp11.dir/src/unit-large_json.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-large_json.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-large_json.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-merge_patch_cpp11.dir/src/unit-merge_patch.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-merge_patch.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-merge_patch.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-meta_cpp11.dir/src/unit-meta.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-meta.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-meta.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-modifiers_cpp11.dir/src/unit-modifiers.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-modifiers.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-modifiers.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-msgpack_cpp11.dir/src/unit-msgpack.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-msgpack.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-msgpack.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-no-mem-leak-on-adl-serialize_cpp11.dir/src/unit-no-mem-leak-on-adl-serialize.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-no-mem-leak-on-adl-serialize.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-no-mem-leak-on-adl-serialize.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-noexcept_cpp11.dir/src/unit-noexcept.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-noexcept.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-noexcept.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-ordered_json_cpp11.dir/src/unit-ordered_json.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-ordered_json.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-ordered_json.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-ordered_map_cpp11.dir/src/unit-ordered_map.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-ordered_map.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-ordered_map.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-pointer_access_cpp11.dir/src/unit-pointer_access.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-pointer_access.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-pointer_access.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-readme_cpp11.dir/src/unit-readme.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-readme.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-readme.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-reference_access_cpp11.dir/src/unit-reference_access.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-reference_access.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-reference_access.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-regression1_cpp11.dir/src/unit-regression1.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-regression1.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-regression1.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++17 -o CMakeFiles/test-regression1_cpp17.dir/src/unit-regression1.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-regression1.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-regression1.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-regression2_cpp11.dir/src/unit-regression2.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-regression2.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-regression2.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++17 -o CMakeFiles/test-regression2_cpp17.dir/src/unit-regression2.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-regression2.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-regression2.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++20 -o CMakeFiles/test-regression2_cpp20.dir/src/unit-regression2.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-regression2.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-regression2.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-serialization_cpp11.dir/src/unit-serialization.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-serialization.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-serialization.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-testsuites_cpp11.dir/src/unit-testsuites.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-testsuites.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-testsuites.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-to_chars_cpp11.dir/src/unit-to_chars.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-to_chars.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-to_chars.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-type_traits_cpp11.dir/src/unit-type_traits.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-type_traits.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-type_traits.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-ubjson_cpp11.dir/src/unit-ubjson.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-ubjson.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-ubjson.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-udl_cpp11.dir/src/unit-udl.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-udl.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-udl.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-udt_cpp11.dir/src/unit-udt.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-udt.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-udt.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-udt_macro_cpp11.dir/src/unit-udt_macro.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-udt_macro.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-udt_macro.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-unicode1_cpp11.dir/src/unit-unicode1.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-unicode1.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-unicode1.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-unicode2_cpp11.dir/src/unit-unicode2.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-unicode2.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-unicode2.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-unicode3_cpp11.dir/src/unit-unicode3.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-unicode3.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-unicode3.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-unicode4_cpp11.dir/src/unit-unicode4.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-unicode4.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-unicode4.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-unicode5_cpp11.dir/src/unit-unicode5.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-unicode5.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-unicode5.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-user_defined_input_cpp11.dir/src/unit-user_defined_input.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-user_defined_input.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-user_defined_input.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-windows_h_cpp11.dir/src/unit-windows_h.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-windows_h.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-windows_h.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-wstring_cpp11.dir/src/unit-wstring.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-wstring.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-wstring.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -DJSON_USE_LEGACY_DISCARDED_VALUE_COMPARISON=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++11 -o CMakeFiles/test-comparison_legacy_cpp11.dir/src/unit-comparison.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-comparison.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-comparison.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -DJSON_TEST_USING_MULTIPLE_HEADERS=1 -DJSON_USE_LEGACY_DISCARDED_VALUE_COMPARISON=1 -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/doctest -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/thirdparty/fifo_map -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/include -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -std=gnu++20 -o CMakeFiles/test-comparison_legacy_cpp20.dir/src/unit-comparison.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-comparison.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/src/unit-comparison.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests/abi",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -isystem /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/../thirdparty/doctest -isystem /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -o CMakeFiles/abi_compat_main.dir/main.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/main.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/main.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests/abi/config",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -isystem /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/../thirdparty/doctest -isystem /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -o CMakeFiles/abi_config_default.dir/default.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/config/default.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/config/default.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests/abi/config",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -isystem /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/../thirdparty/doctest -isystem /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -o CMakeFiles/abi_config_noversion.dir/noversion.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/config/noversion.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/config/noversion.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests/abi/config",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -isystem /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/../thirdparty/doctest -isystem /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -o CMakeFiles/abi_config_custom.dir/custom.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/config/custom.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/config/custom.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests/abi/diag",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -isystem /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/../thirdparty/doctest -isystem /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -o CMakeFiles/abi_compat_diag_on.dir/diag_on.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/diag/diag_on.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/diag/diag_on.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests/abi/diag",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -isystem /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/../thirdparty/doctest -isystem /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -o CMakeFiles/abi_compat_diag_off.dir/diag_off.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/diag/diag_off.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/diag/diag_off.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests/abi/diag",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -isystem /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/../thirdparty/doctest -isystem /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -o CMakeFiles/abi_compat_diag.dir/diag.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/diag/diag.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/diag/diag.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests/abi/inline_ns",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -isystem /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/../thirdparty/doctest -isystem /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -o CMakeFiles/abi_compat_inline_ns.dir/use_v3_10_5.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/inline_ns/use_v3_10_5.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/inline_ns/use_v3_10_5.cpp"
+},
+{
+  "directory": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/build/tests/abi/inline_ns",
+  "command": "/usr/bin/g++ -DDOCTEST_CONFIG_SUPER_FAST_ASSERTS -DJSON_TEST_KEEP_MACROS -I/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/include -isystem /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/../thirdparty/doctest -isystem /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/include -g -Wno-deprecated -Wno-float-equal -Wno-deprecated-declarations -o CMakeFiles/abi_compat_inline_ns.dir/use_current.cpp.o -c /mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/inline_ns/use_current.cpp",
+  "file": "/mnt/c/Users/razva/OneDrive/Desktop/licenta/code/Food-Delivery-App/classes/json/tests/abi/inline_ns/use_current.cpp"
+}
+]

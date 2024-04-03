@@ -1,0 +1,49 @@
+{
+    "customers": [
+        {
+            "id": 1,
+            "location": "New York",
+            "type": "customer"
+       },
+        {
+            "id": 2,
+            "location": "New York",
+            "type": "customer"
+       },
+       {
+            "id": 3,
+            "location": "New York",
+            "type": "customer"
+        },
+        {
+            "id": 4,
+            "location": "New York",
+            "type": "customer"
+       },
+       {
+            "id": 5,
+            "location": "New York",
+            "type": "customer"
+        },
+        {
+            "id": 6,
+            "location": "New York",
+            "type": "customer"
+       },
+       {
+            "id": 7,
+            "location": "New York",
+            "type": "customer"
+        },
+        {
+            "id": 8,
+            "location": "New York",
+            "type": "customer"
+       },
+       {
+            "id": 9,
+            "location": "New York",
+            "type": "customer"
+        }
+    ]
+}

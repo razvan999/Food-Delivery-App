@@ -1,0 +1,454 @@
+{
+    "customers": [
+        {
+            "id": 4,
+            "status": "placed",
+            "location": {
+                "x": 37,
+                "y": 52
+            },
+            "type": "customer"
+        },
+        {
+            "id": 5,
+            "status": "placed",
+            "location": {
+                "x": 49,
+                "y": 49
+            },
+            "type": "customer"
+        },
+        {
+            "id": 6,
+            "status": "placed",
+            "location": {
+                "x": 52,
+                "y": 64
+            },
+            "type": "customer"
+        },
+        {
+            "id": 7,
+            "status": "placed",
+            "location": {
+                "x": 20,
+                "y": 26
+            },
+            "type": "customer"
+        },
+        {
+            "id": 8,
+            "status": "placed",
+            "location": {
+                "x": 40,
+                "y": 30
+            },
+            "type": "customer"
+        },
+        {
+            "id": 9,
+            "status": "placed",
+            "location": {
+                "x": 21,
+                "y": 47
+            },
+            "type": "customer"
+        },
+        {
+            "id": 10,
+            "status": "placed",
+            "location": {
+                "x": 17,
+                "y": 63
+            },
+            "type": "customer"
+        },
+        {
+            "id": 11,
+            "status": "placed",
+            "location": {
+                "x": 31,
+                "y": 62
+            },
+            "type": "customer"
+        },
+        {
+            "id": 12,
+            "status": "placed",
+            "location": {
+                "x": 52,
+                "y": 33
+            },
+            "type": "customer"
+        },
+        {
+            "id": 13,
+            "status": "placed",
+            "location": {
+                "x": 51,
+                "y": 21
+            },
+            "type": "customer"
+        },
+        {
+            "id": 14,
+            "status": "placed",
+            "location": {
+                "x": 42,
+                "y": 41
+            },
+            "type": "customer"
+        },
+        {
+            "id": 15,
+            "status": "placed",
+            "location": {
+                "x": 31,
+                "y": 32
+            },
+            "type": "customer"
+        },
+        {
+            "id": 16,
+            "status": "placed",
+            "location": {
+                "x": 5,
+                "y": 25
+            },
+            "type": "customer"
+        },
+        {
+            "id": 17,
+            "status": "placed",
+            "location": {
+                "x": 12,
+                "y": 42
+            },
+            "type": "customer"
+        },
+        {
+            "id": 18,
+            "status": "placed",
+            "location": {
+                "x": 36,
+                "y": 16
+            },
+            "type": "customer"
+        },
+        {
+            "id": 19,
+            "status": "placed",
+            "location": {
+                "x": 52,
+                "y": 41
+            },
+            "type": "customer"
+        },
+        {
+            "id": 20,
+            "status": "placed",
+            "location": {
+                "x": 27,
+                "y": 23
+            },
+            "type": "customer"
+        },
+        {
+            "id": 21,
+            "status": "placed",
+            "location": {
+                "x": 17,
+                "y": 33
+            },
+            "type": "customer"
+        },
+        {
+            "id": 22,
+            "status": "placed",
+            "location": {
+                "x": 13,
+                "y": 13
+            },
+            "type": "customer"
+        },
+        {
+            "id": 23,
+            "status": "placed",
+            "location": {
+                "x": 57,
+                "y": 58
+            },
+            "type": "customer"
+        },
+        {
+            "id": 24,
+            "status": "placed",
+            "location": {
+                "x": 62,
+                "y": 42
+            },
+            "type": "customer"
+        },
+        {
+            "id": 25,
+            "status": "placed",
+            "location": {
+                "x": 42,
+                "y": 57
+            },
+            "type": "customer"
+        },
+        {
+            "id": 26,
+            "status": "placed",
+            "location": {
+                "x": 16,
+                "y": 57
+            },
+            "type": "customer"
+        },
+        {
+            "id": 27,
+            "status": "placed",
+            "location": {
+                "x": 8,
+                "y": 52
+            },
+            "type": "customer"
+        },
+        {
+            "id": 28,
+            "status": "placed",
+            "location": {
+                "x": 7,
+                "y": 38
+            },
+            "type": "customer"
+        },
+        {
+            "id": 29,
+            "status": "placed",
+            "location": {
+                "x": 27,
+                "y": 68
+            },
+            "type": "customer"
+        },
+        {
+            "id": 30,
+            "status": "placed",
+            "location": {
+                "x": 30,
+                "y": 48
+            },
+            "type": "customer"
+        },
+        {
+            "id": 31,
+            "status": "placed",
+            "location": {
+                "x": 43,
+                "y": 67
+            },
+            "type": "customer"
+        },
+        {
+            "id": 32,
+            "status": "placed",
+            "location": {
+                "x": 58,
+                "y": 48
+            },
+            "type": "customer"
+        },
+        {
+            "id": 33,
+            "status": "placed",
+            "location": {
+                "x": 58,
+                "y": 27
+            },
+            "type": "customer"
+        },
+        {
+            "id": 34,
+            "status": "placed",
+            "location": {
+                "x": 37,
+                "y": 69
+            },
+            "type": "customer"
+        },
+        {
+            "id": 35,
+            "status": "placed",
+            "location": {
+                "x": 38,
+                "y": 46
+            },
+            "type": "customer"
+        },
+        {
+            "id": 36,
+            "status": "placed",
+            "location": {
+                "x": 46,
+                "y": 10
+            },
+            "type": "customer"
+        },
+        {
+            "id": 37,
+            "status": "placed",
+            "location": {
+                "x": 61,
+                "y": 33
+            },
+            "type": "customer"
+        },
+        {
+            "id": 38,
+            "status": "placed",
+            "location": {
+                "x": 62,
+                "y": 63
+            },
+            "type": "customer"
+        },
+        {
+            "id": 39,
+            "status": "placed",
+            "location": {
+                "x": 63,
+                "y": 69
+            },
+            "type": "customer"
+        },
+        {
+            "id": 40,
+            "status": "placed",
+            "location": {
+                "x": 32,
+                "y": 22
+            },
+            "type": "customer"
+        },
+        {
+            "id": 41,
+            "status": "placed",
+            "location": {
+                "x": 45,
+                "y": 35
+            },
+            "type": "customer"
+        },
+        {
+            "id": 42,
+            "status": "placed",
+            "location": {
+                "x": 59,
+                "y": 15
+            },
+            "type": "customer"
+        },
+        {
+            "id": 43,
+            "status": "placed",
+            "location": {
+                "x": 5,
+                "y": 6
+            },
+            "type": "customer"
+        },
+        {
+            "id": 44,
+            "status": "placed",
+            "location": {
+                "x": 10,
+                "y": 17
+            },
+            "type": "customer"
+        },
+        {
+            "id": 45,
+            "status": "placed",
+            "location": {
+                "x": 21,
+                "y": 10
+            },
+            "type": "customer"
+        },
+        {
+            "id": 46,
+            "status": "placed",
+            "location": {
+                "x": 5,
+                "y": 64
+            },
+            "type": "customer"
+        },
+        {
+            "id": 47,
+            "status": "placed",
+            "location": {
+                "x": 30,
+                "y": 15
+            },
+            "type": "customer"
+        },
+        {
+            "id": 48,
+            "status": "placed",
+            "location": {
+                "x": 39,
+                "y": 10
+            },
+            "type": "customer"
+        },
+        {
+            "id": 49,
+            "status": "placed",
+            "location": {
+                "x": 32,
+                "y": 39
+            },
+            "type": "customer"
+        },
+        {
+            "id": 50,
+            "status": "placed",
+            "location": {
+                "x": 25,
+                "y": 32
+            },
+            "type": "customer"
+        },
+        {
+            "id": 51,
+            "status": "placed",
+            "location": {
+                "x": 25,
+                "y": 55
+            },
+            "type": "customer"
+        },
+        {
+            "id": 52,
+            "status": "placed",
+            "location": {
+                "x": 48,
+                "y": 28
+            },
+            "type": "customer"
+        },
+        {
+            "id": 53,
+            "status": "placed",
+            "location": {
+                "x": 56,
+                "y": 37
+            },
+            "type": "customer"
+        }
+    ]
+}
