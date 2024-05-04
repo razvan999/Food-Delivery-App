@@ -136,6 +136,8 @@ function fetchInputData(selectedValue) {
 
 function fetchOutputData(selectedValue) {
   const newValue = selectedValue.replace("input", "output");
+  console.log(selectedValue);
+  console.log(newValue);
   fetch(newValue)
     .then((response) => {
       if (!response.ok) {

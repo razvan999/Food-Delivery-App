@@ -11,7 +11,7 @@ router.get("/:type/:filename", (req, res) => { // type is either "input" or "out
         jsonDirectoryPath += "input_for_cpp";
     }
     else if (req.params.type === "output") {
-        jsonDirectoryPath += "output_from_cpp";
+        jsonDirectoryPath += "output_for_cpp";
     }
 
     fs.readFile(path.join(__dirname, jsonDirectoryPath, fileName), "utf8", (err, jsonData) => {
