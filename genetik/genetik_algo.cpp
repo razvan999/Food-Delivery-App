@@ -12,7 +12,7 @@
 #define vehicles_path "./genetik_data/vehicles.json"
 
 #define population_size 10
-#define iteratii 200
+#define iteratii 200--------
 #define mutation_prob 0.1
 #define crossover_prob 0.6
 

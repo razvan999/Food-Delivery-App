@@ -43,6 +43,7 @@ class graph
 private:
     vector<node> nodes;
     vector<vector<tuple<int, int>>> edges;
+    int stores_count;
 
     bool initiate_stores(string sores_path)
     {
@@ -61,6 +62,7 @@ private:
             json data = json::parse(jsonContent);
 
             auto stores = data["stores"];
+            stores_count = stores.size();
             for (const auto &store : stores)
             {
                 int id = store["id"];
@@ -210,6 +212,23 @@ public:
         edges[id_a].push_back(make_tuple(id_b, weight));
         edges[id_b].push_back(make_tuple(id_a, weight));
     }
+
+    int get_nodes_count()
+    {
+        return nodes.size();
+    }
+
+    int get_stores_count()
+    {
+        return stores_count;
+    }
+
+    node_location get_node_location(int id)
+    {
+        return nodes[id].location;
+    }
+
+
 
     vector<node> get_nodes()
     {

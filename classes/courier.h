@@ -55,6 +55,16 @@ public:
     {
         return status == courier_status::available;
     }
+
+    int get_id()
+    {
+        return id;
+    }
+
+    courier_location get_location()
+    {
+        return location;
+    }
 };
 
 vector<courier> initiate_vehicles(string vehicles_path)
