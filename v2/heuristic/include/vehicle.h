@@ -1,3 +1,6 @@
+#include <vector>
+using namespace std;
+
 class Vehicle {
 private:
     int id;

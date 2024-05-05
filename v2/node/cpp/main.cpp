@@ -1,11 +1,22 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <cstring>
 
-int main() {
-    std::cout << "Hello World" << std::endl;
+#include <thread>
+#include <chrono>
 
-    std::ofstream outfile ("./json/output_for_cpp/ulysses-n16-k3.json");
+int main(int argc, char *argv[]) {
+    char fileName[100];
+    std::strcpy(fileName, argv[1]);
+    std::strcat(fileName, ".json");
+    std::cout << "Name of the file: " << fileName << std::endl;
+    
+    // std::cout << "Going to sleep for 10 seconds..." << std::endl;
+    // std::this_thread::sleep_for(std::chrono::seconds(10));
+    // std::cout << "Woke up after 10 seconds!" << std::endl;
+
+    std::ofstream outfile ("./json/output_for_cpp/" + std::string(fileName));
     if (!outfile) {
         std::cerr << "Error: Unable to create file" << std::endl;
         return 1;

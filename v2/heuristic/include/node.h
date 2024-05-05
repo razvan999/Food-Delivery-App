@@ -1,7 +1,7 @@
 #include "enums.h"
 
 struct Node_location {
-    int x, y;
+    float x, y;
 };
 
 struct Node {

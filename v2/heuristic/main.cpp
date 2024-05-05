@@ -1,23 +1,21 @@
 #include <iostream>
-#include "graph.h"
-#include "vehicle.h"
+#include <vector>
+
+#include "./include/graph.h"
+#include "./include/vehicle.h"
+#include "./include/read_file.h"
 
 using namespace std;
 
-#define graph_path "./data/test_g.txt"
-#define vehicle_path "./data/test_v.txt"
+typedef vector<Vehicle> Vehicles;
 
-void initiate_graph() {
-    
+int main(int argc, char *argv[]) {
+    Graph graph;
+    Vehicles vehicles;
+    initialize(argc, argv, graph, vehicles);
 
-}
+    cout << "Number of vehicles: " << vehicles.size() << endl;
 
-void initiate_vehicles() {
-
-}
-
-int main() {
-    
 
 
 

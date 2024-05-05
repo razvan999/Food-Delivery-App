@@ -1,8 +1,5 @@
 #!/bin/bash
 
-if ! g++ -o main.out main.cpp; then
-    exit 1
-fi
-
-./main.out
-echo ""
+g++ ./main.cpp -o main.out
+./main.out "ulysses-n16-k3"
+echo "Done"

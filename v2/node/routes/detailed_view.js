@@ -51,11 +51,11 @@ wss.on("connection", function connection(ws) {
 
     if (header == "run_algorithm") {
       console.log("RUN THE ALGORITHM");
+      const fileName = parts[parts.length - 1];
 
       // run cpp
-      runCpp();
+      runCpp(fileName);
 
-      const fileName = parts[parts.length - 1];
       const filePath = path.join(
         __dirname,
         "../json/output_for_cpp",
@@ -95,40 +95,10 @@ function checkFileExists(filePath, interval) {
   });
 }
 
-
-
-
-
-
-
-
-
-
-
-// function runCpp() {
-//   console.log("Running C++ program...");
-//   console.log("Current working directory:", process.cwd());
-
-//   const { exec } = require("child_process");
-//   const fullPath = path.join(__dirname, "..", "cpp", "a.out");
-//   console.log("Full path:", fullPath);
-//   exec(fullPath, (error, stdout, stderr) => {
-//     if (error) {
-//       console.error(`exec error: ${error}`);
-//       return;
-//     }
-//     console.log(`stdout: ${stdout}`);
-//     console.error(`stderr: ${stderr}`);
-//   });
-// }
-
-function runCpp() {
+function runCpp(fileName) {
   console.log("Running C++ program...");
-  
-  // Get the full path to the C++ program
-  const cppFilePath = path.join(__dirname, "..", "cpp", "main.cpp");
 
-  // Compile the C++ program
+  const cppFilePath = path.join(__dirname, "..", "cpp", "main.cpp");
   const { exec } = require("child_process");
   exec(`g++ ${cppFilePath} -o ${__dirname}/../cpp/a.out`, (error, stdout, stderr) => {
     if (error) {
@@ -136,8 +106,7 @@ function runCpp() {
       return;
     }
 
-    // Run the compiled executable
-    exec(`${__dirname}/../cpp/a.out`, (error, stdout, stderr) => {
+    exec(`${__dirname}/../cpp/a.out ${fileName}`, (error, stdout, stderr) => {
       if (error) {
         console.error(`Execution error: ${error}`);
         return;
