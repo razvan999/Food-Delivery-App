@@ -9,7 +9,7 @@ typedef vector<Vehicle> Vehicles;
 
 using namespace std;
 
-#define data_folder_path "./data/"
+#define data_folder_path "../data/"
 
 bool readFile(char *filePath, Graph &graph, Vehicles &vehicles) {
     ifstream file;
@@ -76,7 +76,7 @@ bool readFile(char *filePath, Graph &graph, Vehicles &vehicles) {
 
     auto depots = graph.get_depots();
     for (int i = 0; i < numberOfTrucks; i++) {
-        vehicles.push_back(Vehicle(i, capacity, depots[i]));
+        vehicles.push_back(Vehicle(i, capacity, depots[0]));
     }
 
     file.close();

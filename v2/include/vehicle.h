@@ -1,4 +1,5 @@
 #include <vector>
+
 using namespace std;
 
 class Vehicle {
@@ -46,5 +47,9 @@ public:
 
     Node get_depot(){
         return this->depot;
+    }
+
+    void print(){
+        cout << "Vehicle ID: " << this->id << " Capacity: " << this->capacity << " Used Capacity: " << this->used_capacity << " Depot ID: " << this->depot.id << " X: " << this->depot.location.x << " Y: " << this->depot.location.y << endl;
     }
 };
