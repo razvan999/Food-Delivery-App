@@ -1,0 +1,14 @@
+﻿  main_genetic.cpp
+C:\Users\razva\OneDrive\Desktop\licenta\code\Food-Delivery-App\v2\vs\visual_studio\visual_studio\include\read_file.h(80,39): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'main_genetic.cpp')
+  
+C:\Users\razva\OneDrive\Desktop\licenta\code\Food-Delivery-App\v2\vs\visual_studio\visual_studio\include\genetic_algo.h(14,13): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'main_genetic.cpp')
+  
+C:\Users\razva\OneDrive\Desktop\licenta\code\Food-Delivery-App\v2\vs\visual_studio\visual_studio\include\genetic_algo.h(70,72): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main_genetic.cpp')
+  
+C:\Users\razva\OneDrive\Desktop\licenta\code\Food-Delivery-App\v2\vs\visual_studio\visual_studio\include\genetic_algo.h(80,60): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'main_genetic.cpp')
+  
+  visual_studio.vcxproj -> C:\Users\razva\OneDrive\Desktop\licenta\code\Food-Delivery-App\v2\vs\visual_studio\x64\Debug\visual_studio.exe
