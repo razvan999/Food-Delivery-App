@@ -6,11 +6,12 @@
 #include "./vehicle.h"
 #include "./read_file.h"
 
-#define population_size 100 // mereu par
-#define generation_limit 500
-#define crossover_prob 0.8
-#define mutation_rate 0.1
+#define population_size 1000 // mereu par
+#define generation_limit 50
+#define crossover_prob 0.84
+#define mutation_rate 0.3
 #define epsilon 0.0001
+#define tournament_size 20
 
 /*
 

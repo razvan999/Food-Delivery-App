@@ -26,8 +26,8 @@ void print_population(Population population) {
     cout << "\nPopulation total_cost: " << population.total_cost << endl;
     for (int i = 0; i < population_size; i++) {
         cout << "Solution " << i << " Cost: " << population.solutions[i].cost << endl;
-        cout << "Printing Routes: " << endl;
-        print_routes(population.solutions[i]);
+        //cout << "Printing Routes: " << endl;
+        //print_routes(population.solutions[i]);
     }
 }
 

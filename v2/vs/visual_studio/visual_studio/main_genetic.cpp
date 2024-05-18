@@ -8,6 +8,94 @@
 
 using namespace std;
 
+Solution get_second_best_sol_from_current_pop(Population population, Solution best_solution) {
+	Solution second;
+	second.cost = 999999.0;
+	for (int i = 0; i < population_size; i++) {
+		if (population.solutions[i].cost != best_solution.cost) {
+			if (population.solutions[i].cost < second.cost) {
+				second = population.solutions[i];
+			}
+		}
+	}
+
+	return second;
+}
+
+struct freq {
+	float cost;
+	Solution sol;
+	int freq;
+};
+
+bool in_freq(Solution sol, vector<freq> frecventa) {
+	for (int i = 0; i < frecventa.size(); i++) {
+		if (sol.cost == frecventa[i].cost) {
+			if (check_equal_solutions(sol, frecventa[i].sol))
+				return true;
+		}
+	}
+
+	return false;
+}
+
+void update_frecventa(Solution sol, vector<freq> &frecventa) {
+	for (int i = 0; i < frecventa.size(); i++) {
+		if (sol.cost == frecventa[i].cost) {
+			if (check_equal_solutions(sol, frecventa[i].sol)) {
+				frecventa[i].freq++;
+			}
+		}
+	}
+}
+
+void disperare(Vehicles vehicles, Population &population) {
+	update_cost(population);
+
+	//vector<freq> frecventa;
+	//frecventa.reserve(population_size / 2);
+
+	//for (int i = 0; i < population_size; i++) {
+	//	if (in_freq(population.solutions[i], frecventa)) {
+	//		update_frecventa(population.solutions[i], frecventa);
+	//	}
+	//	else {
+	//		frecventa.push_back({ population.solutions[i].cost, population.solutions[i], 1 });
+	//	}
+	//}
+
+	//// print
+	//cout << "Frecventa: " << endl;
+	//cout << "Size: " << frecventa.size() << endl;
+	//for (int i = 0; i < frecventa.size(); i++) {
+	//	cout << "Cost: " << frecventa[i].cost << " Freq: " << frecventa[i].freq << endl;
+	//}
+
+	Solution best_solution = get_best_sol_from_current_pop(population);
+	cout << "best inainte de disperare -> " << best_solution.cost << endl;
+
+	Solution second_best_solution = get_second_best_sol_from_current_pop(population, best_solution);
+	for (int i = 0; i < population_size; i++) {
+		if (population.solutions[i].cost != best_solution.cost && population.solutions[i].cost != second_best_solution.cost) {
+			mutate_solution(vehicles, population.solutions[i]);
+		}
+		else {
+			if (check_equal_solutions(population.solutions[i], best_solution)) {
+				continue;
+			}
+
+			if (check_equal_solutions(population.solutions[i], second_best_solution)) {
+				continue;
+			}
+		}
+	}
+
+	update_cost(population);
+}
+
+
+
+
 void test_mutation(Vehicles vehicles);
 void test_crossover(Graph graph, Vehicles vehicles);
 
@@ -48,7 +136,11 @@ int main() {
 	    crossover(vehicles, population);
 	    mutation(vehicles, population);
 
-		cout << population.total_cost << endl;
+		if (generation % 10 == 0) 
+			disperare(vehicles, population);
+
+		//cout << population.total_cost << endl;
+		cout << generation << endl;
 	    generation++;
 	}
 

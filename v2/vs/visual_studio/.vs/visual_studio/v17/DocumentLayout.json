@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\razva\\OneDrive\\Desktop\\licenta\\code\\Food-Delivery-App\\v2\\vs\\visual_studio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{66ADE1A0-8324-4FDD-AC7E-73C289593F69}|visual_studio\\visual_studio.vcxproj|C:\\Users\\razva\\OneDrive\\Desktop\\licenta\\code\\Food-Delivery-App\\v2\\vs\\visual_studio\\visual_studio\\include\\genetic_algo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{66ADE1A0-8324-4FDD-AC7E-73C289593F69}|visual_studio\\visual_studio.vcxproj|solutionrelative:visual_studio\\include\\genetic_algo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{66ADE1A0-8324-4FDD-AC7E-73C289593F69}|visual_studio\\visual_studio.vcxproj|C:\\Users\\razva\\OneDrive\\Desktop\\licenta\\code\\Food-Delivery-App\\v2\\vs\\visual_studio\\visual_studio\\include\\config.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{66ADE1A0-8324-4FDD-AC7E-73C289593F69}|visual_studio\\visual_studio.vcxproj|solutionrelative:visual_studio\\include\\config.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -17,6 +13,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{66ADE1A0-8324-4FDD-AC7E-73C289593F69}|visual_studio\\visual_studio.vcxproj|C:\\Users\\razva\\OneDrive\\Desktop\\licenta\\code\\Food-Delivery-App\\v2\\vs\\visual_studio\\visual_studio\\include\\printing.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{66ADE1A0-8324-4FDD-AC7E-73C289593F69}|visual_studio\\visual_studio.vcxproj|solutionrelative:visual_studio\\include\\printing.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66ADE1A0-8324-4FDD-AC7E-73C289593F69}|visual_studio\\visual_studio.vcxproj|C:\\Users\\razva\\OneDrive\\Desktop\\licenta\\code\\Food-Delivery-App\\v2\\vs\\visual_studio\\visual_studio\\include\\genetic_algo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{66ADE1A0-8324-4FDD-AC7E-73C289593F69}|visual_studio\\visual_studio.vcxproj|solutionrelative:visual_studio\\include\\genetic_algo.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,57 +26,80 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "genetic_algo.h",
-              "DocumentMoniker": "C:\\Users\\razva\\OneDrive\\Desktop\\licenta\\code\\Food-Delivery-App\\v2\\vs\\visual_studio\\visual_studio\\include\\genetic_algo.h",
-              "RelativeDocumentMoniker": "visual_studio\\include\\genetic_algo.h",
-              "ToolTip": "C:\\Users\\razva\\OneDrive\\Desktop\\licenta\\code\\Food-Delivery-App\\v2\\vs\\visual_studio\\visual_studio\\include\\genetic_algo.h",
-              "RelativeToolTip": "visual_studio\\include\\genetic_algo.h",
-              "ViewState": "AQIAAF8CAAAAAAAAAAAAAHICAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-06T14:41:14.294Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "config.h",
               "DocumentMoniker": "C:\\Users\\razva\\OneDrive\\Desktop\\licenta\\code\\Food-Delivery-App\\v2\\vs\\visual_studio\\visual_studio\\include\\config.h",
               "RelativeDocumentMoniker": "visual_studio\\include\\config.h",
               "ToolTip": "C:\\Users\\razva\\OneDrive\\Desktop\\licenta\\code\\Food-Delivery-App\\v2\\vs\\visual_studio\\visual_studio\\include\\config.h",
               "RelativeToolTip": "visual_studio\\include\\config.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAnAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-05-07T20:11:02.202Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "printing.h",
               "DocumentMoniker": "C:\\Users\\razva\\OneDrive\\Desktop\\licenta\\code\\Food-Delivery-App\\v2\\vs\\visual_studio\\visual_studio\\include\\printing.h",
               "RelativeDocumentMoniker": "visual_studio\\include\\printing.h",
               "ToolTip": "C:\\Users\\razva\\OneDrive\\Desktop\\licenta\\code\\Food-Delivery-App\\v2\\vs\\visual_studio\\visual_studio\\include\\printing.h",
               "RelativeToolTip": "visual_studio\\include\\printing.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAANAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAABwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-09T18:43:47.23Z"
+              "WhenOpened": "2024-05-09T18:43:47.23Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "main_genetic.cpp",
               "DocumentMoniker": "C:\\Users\\razva\\OneDrive\\Desktop\\licenta\\code\\Food-Delivery-App\\v2\\vs\\visual_studio\\visual_studio\\main_genetic.cpp",
               "RelativeDocumentMoniker": "visual_studio\\main_genetic.cpp",
               "ToolTip": "C:\\Users\\razva\\OneDrive\\Desktop\\licenta\\code\\Food-Delivery-App\\v2\\vs\\visual_studio\\visual_studio\\main_genetic.cpp",
               "RelativeToolTip": "visual_studio\\main_genetic.cpp",
-              "ViewState": "AQIAABwAAAAAAAAAAAAIwDIAAAAoAAAA",
+              "ViewState": "AQIAAIEAAAAAAAAAAAAAAIoAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-06T14:18:55.131Z"
+              "WhenOpened": "2024-05-06T14:18:55.131Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "b87b49a9-f650-4d95-a0a1-2b0ed7b80e12",
+        "Display": 0,
+        "X": 396,
+        "Y": 83,
+        "Width": 1532,
+        "Height": 975,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "genetic_algo.h",
+              "DocumentMoniker": "C:\\Users\\razva\\OneDrive\\Desktop\\licenta\\code\\Food-Delivery-App\\v2\\vs\\visual_studio\\visual_studio\\include\\genetic_algo.h",
+              "RelativeDocumentMoniker": "visual_studio\\include\\genetic_algo.h",
+              "ToolTip": "C:\\Users\\razva\\OneDrive\\Desktop\\licenta\\code\\Food-Delivery-App\\v2\\vs\\visual_studio\\visual_studio\\include\\genetic_algo.h",
+              "RelativeToolTip": "visual_studio\\include\\genetic_algo.h",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAKsAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-06T14:41:14.294Z",
+              "EditorCaption": ""
             }
           ]
         }

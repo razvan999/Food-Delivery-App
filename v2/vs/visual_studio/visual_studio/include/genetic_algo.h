@@ -2,8 +2,13 @@
 #include <random>
 #include <algorithm>
 #include <numeric>
+#include <set>
 
 #include "./config.h"
+void mutate_solution(Vehicles vehicles, Solution& solution);
+
+
+
 
 void clusterizare(Graph graph, Vehicles vehicles) {} // poate imi trebuie cand am mai multe depozite
 
@@ -164,8 +169,8 @@ std::vector<T> sample_without_replacement(const std::vector<T>& population, size
 	return sample;
 }
 
-//void selection(Population& population, int tournamentSize = population_size/3) {
-void selection(Population& population, int tournamentSize = population_size) {
+void selection(Population& population, int tournamentSize = tournament_size) {
+//void selection(Population& population, int tournamentSize = population_size) {
 	update_cost(population);
 
 	Population mating_pool;
@@ -645,14 +650,96 @@ vector<float> calculateNormalizedProbabilities(const Population& population) {
 	return probabilities;
 }
 
-parents_for_crossover_indices get_parents(const Population& population, const vector<float>& probabilities) {
+//parents_for_crossover_indices get_parents(const Population& population, const vector<float>& probabilities) {
+//	parents_for_crossover_indices parents_indices;
+//	parents_indices.parent1 = -1;
+//	parents_indices.parent2 = -1;
+//
+//	random_device rd;
+//	mt19937 gen(rd());
+//	uniform_real_distribution<float> dis(0.0f, 1.0f);
+//	float rand1 = dis(gen);
+//	float rand2 = dis(gen);
+//
+//	float cumulative_probability = 0.0f;
+//	for (size_t i = 0; i < population.solutions.size(); ++i) {
+//		cumulative_probability += probabilities[i];
+//		if (cumulative_probability >= rand1 && parents_indices.parent1 == -1) {
+//			parents_indices.parent1 = static_cast<int>(i);
+//		}
+//		if (cumulative_probability >= rand2 && parents_indices.parent2 == -1 && static_cast<int>(i) != parents_indices.parent1) {
+//			parents_indices.parent2 = static_cast<int>(i);
+//		}
+//		if (parents_indices.parent1 != -1 && parents_indices.parent2 != -1) {
+//			break;
+//		}
+//	}
+//
+//	if (parents_indices.parent2 == -1) {
+//		do {
+//			parents_indices.parent2 = (parents_indices.parent2 + 1) % static_cast<int>(population.solutions.size());
+//		} while (parents_indices.parent2 == parents_indices.parent1);
+//	}
+//
+//	return parents_indices;
+//}
+
+bool check_equal_solutions(const Solution& sol1, const Solution& sol2) {
+	if (std::abs(sol1.cost - sol2.cost) > epsilon) {
+		return false;
+	}
+
+	if (sol1.routes.size() != sol2.routes.size()) {
+		return false;
+	}
+
+	for (size_t i = 0; i < sol1.routes.size(); ++i) {
+		if (sol1.routes[i].size() != sol2.routes[i].size()) {
+			return false;
+		}
+
+		for (size_t j = 0; j < sol1.routes[i].size(); ++j) {
+			if (sol1.routes[i][j].id != sol2.routes[i][j].id) {
+				return false;
+			}
+		}
+	}
+
+	return true;
+}
+
+struct SolutionComparator {
+	bool operator()(const Solution& lhs, const Solution& rhs) const {
+		// Compare by cost first
+		if (lhs.cost != rhs.cost) {
+			return lhs.cost < rhs.cost;
+		}
+		// Then compare by routes
+		if (lhs.routes.size() != rhs.routes.size()) {
+			return lhs.routes.size() < rhs.routes.size();
+		}
+		for (size_t i = 0; i < lhs.routes.size(); ++i) {
+			if (lhs.routes[i].size() != rhs.routes[i].size()) {
+				return lhs.routes[i].size() < rhs.routes[i].size();
+			}
+			for (size_t j = 0; j < lhs.routes[i].size(); ++j) {
+				if (lhs.routes[i][j].id != rhs.routes[i][j].id) {
+					return lhs.routes[i][j].id < rhs.routes[i][j].id;
+				}
+			}
+		}
+		return false;
+	}
+};
+
+parents_for_crossover_indices get_parents(Vehicles vehicles, Population& population, const std::vector<float>& probabilities) {
 	parents_for_crossover_indices parents_indices;
 	parents_indices.parent1 = -1;
 	parents_indices.parent2 = -1;
 
-	random_device rd;
-	mt19937 gen(rd());
-	uniform_real_distribution<float> dis(0.0f, 1.0f);
+	std::random_device rd;
+	std::mt19937 gen(rd());
+	std::uniform_real_distribution<float> dis(0.0f, 1.0f);
 	float rand1 = dis(gen);
 	float rand2 = dis(gen);
 
@@ -676,6 +763,23 @@ parents_for_crossover_indices get_parents(const Population& population, const ve
 		} while (parents_indices.parent2 == parents_indices.parent1);
 	}
 
+	std::set<Solution, SolutionComparator> unique_solutions(population.solutions.begin(), population.solutions.end());
+	if (unique_solutions.size() < 2) {
+		std::cerr << "Not enough unique parents in the population." << std::endl;
+		
+		cout << population.solutions[parents_indices.parent1].cost << " ";
+		mutate_solution(vehicles, population.solutions[parents_indices.parent2]);
+		update_cost(population);
+		cout << population.solutions[parents_indices.parent2].cost << endl;
+
+
+		return parents_indices;
+	}
+
+	while (check_equal_solutions(population.solutions[parents_indices.parent1], population.solutions[parents_indices.parent2])) {
+		parents_indices.parent2 = (parents_indices.parent2 + 1) % static_cast<int>(population.solutions.size());
+	}
+
 	return parents_indices;
 }
 
@@ -685,10 +789,11 @@ void crossover(Vehicles vehicles, Population& population) {
 	vector<float> probabilities = calculateNormalizedProbabilities(population);
 
 	while (new_population.solutions.size() < population.solutions.size()) {
-		parents_for_crossover_indices parents_indices = get_parents(population, probabilities);
+		parents_for_crossover_indices parents_indices = get_parents(vehicles, population, probabilities);
 
 		float prob = get_random_01();
 		if (prob >= crossover_prob) {
+			//cout << "Crossocer" << endl;
 			new_population.solutions.push_back(population.solutions[parents_indices.parent1]);
 			new_population.solutions.push_back(population.solutions[parents_indices.parent2]);
 			continue;
