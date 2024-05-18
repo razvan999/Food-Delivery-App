@@ -101,6 +101,27 @@ float calculate_distance(Individ individ, graph g, Vehicles vehicles) {
     return distance;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 void selection(Population &pop, graph g, vector<courier> vehicles) {
     // Population new_population;
     Population mating_pool;
@@ -165,6 +186,31 @@ void selection(Population &pop, graph g, vector<courier> vehicles) {
 
     pop = mating_pool;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 void crossover(Population &mating_pool, graph g, vector<courier> vehicles) {
     Population new_population;
