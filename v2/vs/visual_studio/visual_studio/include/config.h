@@ -6,23 +6,12 @@
 #include "./vehicle.h"
 #include "./read_file.h"
 
-#define population_size 1000 // mereu par
-#define generation_limit 50
+#define population_size 400 // mereu par
+#define generation_limit 8
 #define crossover_prob 0.84
-#define mutation_rate 0.3
+#define mutation_rate 0.05
 #define epsilon 0.0001
-#define tournament_size 20
-
-/*
-
-sa vad ce pot sa fac cand atindge un minim local
-poate fac altfel mutatia
-
-sa nu aleg aceeasi parinti in crossover
-
-
-
-*/
+#define tournament_size 15
 
 typedef vector<Vehicle> Vehicles;
 typedef vector<Node> Route;

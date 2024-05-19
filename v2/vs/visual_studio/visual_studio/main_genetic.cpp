@@ -136,8 +136,8 @@ int main() {
 	    crossover(vehicles, population);
 	    mutation(vehicles, population);
 
-		if (generation % 10 == 0) 
-			disperare(vehicles, population);
+		// if (generation % 10 == 0) 
+		// 	disperare(vehicles, population);
 
 		//cout << population.total_cost << endl;
 		cout << generation << endl;
