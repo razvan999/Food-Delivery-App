@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>data visualisation</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="../javascript/showGraphs.js"></script>
+  </head>
+  <body>
+    <h3>Please select the predefined tests...</h3>
+
+    <label for="instance">Choose a test:</label>
+    <select id="instance">
+      <option value="/details/getData/input/ulysses-n16-k3">
+        ulysses-n16-k3
+      </option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+
+    <button id="submitInstance">Submit</button>
+
+    <div class="graphs">
+      <div id="container_input" class="graphContainer"></div>
+      <div id="container_output" class="graphContainer"></div>
+    </div>
+
+  </body>
+</html>

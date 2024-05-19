@@ -9,7 +9,7 @@ const wss = new WebSocket.Server({ noServer: true });
 
 router.get("/", (req, res) => {
   fs.readFile(
-    path.join(__dirname, "../html/index.html"),
+    path.join(__dirname, "../html/graph.html"),
     "utf8",
     (err, data) => {
       if (err) {
