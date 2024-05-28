@@ -169,6 +169,20 @@ std::vector<T> sample_without_replacement(const std::vector<T>& population, size
 	return sample;
 }
 
+
+
+
+
+
+
+
+
+
+int getRandomIndex(int populationSize) {
+	static default_random_engine generator(time(0)); // Seed with current time
+	uniform_int_distribution<int> distribution(0, populationSize - 1);
+	return distribution(generator);
+}
 void selection(Population& population, int tournamentSize = tournament_size) {
 //void selection(Population& population, int tournamentSize = population_size) {
 	update_cost(population);
@@ -178,7 +192,7 @@ void selection(Population& population, int tournamentSize = tournament_size) {
 	while (mating_pool.solutions.size() < population.solutions.size()) {
 		std::vector<Solution> tournament;
 		for (int i = 0; i < tournamentSize; ++i) {
-			int random_index = rand() % population.solutions.size();
+			int random_index = getRandomIndex(population.solutions.size());
 			tournament.push_back(population.solutions[random_index]);
 		}
 
@@ -763,7 +777,7 @@ parents_for_crossover_indices get_parents(Vehicles vehicles, Population& populat
 		} while (parents_indices.parent2 == parents_indices.parent1);
 	}
 
-	std::set<Solution, SolutionComparator> unique_solutions(population.solutions.begin(), population.solutions.end());
+	set<Solution, SolutionComparator> unique_solutions(population.solutions.begin(), population.solutions.end());
 	if (unique_solutions.size() < 2) {
 		std::cerr << "Not enough unique parents in the population." << std::endl;
 		

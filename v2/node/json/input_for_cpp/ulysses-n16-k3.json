@@ -16,6 +16,11 @@
       { "node_index": 14, "x": 37.51, "y": 15.17 },
       { "node_index": 15, "x": 35.49, "y": 14.32 },
       { "node_index": 16, "x": 39.36, "y": 19.56 }
+    ], 
+    "tours": [
+      { "route": [10, 8, 9, 6, 5], "cost": 12 , "vehicle": 1},
+      { "route": [14, 13, 12, 11, 4], "cost": 15 , "vehicle": 2},
+      { "route": [3, 1, 2, 15, 7], "cost": 4 , "vehicle": 3}
     ]
   }
   

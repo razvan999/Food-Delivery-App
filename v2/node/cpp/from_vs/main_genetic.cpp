@@ -136,8 +136,8 @@ int main() {
 	    crossover(vehicles, population);
 	    mutation(vehicles, population);
 
-		if (generation % 10 == 0) 
-			disperare(vehicles, population);
+		// if (generation % 10 == 0) 
+		// 	disperare(vehicles, population);
 
 		//cout << population.total_cost << endl;
 		cout << generation << endl;
@@ -152,6 +152,8 @@ int main() {
 	cout << endl << endl;
 	Solution best_solution = get_best_sol_from_current_pop(population);
 	cout << "Best solution: " << best_solution.cost << endl;
+
+	print_routes(best_solution);
 
 	cout << "\n------End------" << endl;
 	end = chrono::system_clock::now();

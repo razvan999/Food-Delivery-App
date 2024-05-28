@@ -1,0 +1,17 @@
+{"tours": [
+{
+"vehicle": 1,
+"route": [4, 0, 3, 2, 4]
+},
+{
+"vehicle": 0,
+"route": [4, 1, 4]
+}],
+"population_size": 2,
+"generation_limit": 1,
+"crossover_prob": 0.840000,
+"mutation_rate": 0.050000,
+"initial_cost": 248.753998,
+"final_cost": 248.753998,
+"time": 0.000816}
+

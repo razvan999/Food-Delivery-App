@@ -1,126 +1,26 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-    <title>Google Maps Location Selector</title>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEehViAH5iUeosbqfg9jEiyvQ3CtQWtKg&callback=initMap" async defer></script>
-    <script>
-        let map;
-        let locations = [];
-
-        function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: 47.1562245, lng: 27.5045704},
-                zoom: 12
-            });
-
-            map.addListener('click', function(event) {
-                addMarker(event.latLng);
-                const locationData = {
-                    name: prompt("Enter location name:"),
-                    address: prompt("Enter address:"),
-                    latitude: event.latLng.lat(),
-                    longitude: event.latLng.lng()
-                };
-                locations.push(locationData);
-                updateLocations();
-            });
-        }
-
-        function addMarker(location) {
-            new google.maps.Marker({
-                position: location,
-                map: map
-            });
-        }
-
-        function updateLocations() {
-            document.getElementById('locations').textContent = JSON.stringify(locations, null, 2);
-        }
-
-        function downloadJSON() {
-            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(locations, null, 2));
-            const downloadAnchorNode = document.createElement('a');
-            downloadAnchorNode.setAttribute("href", dataStr);
-            downloadAnchorNode.setAttribute("download", "locations.json");
-            document.body.appendChild(downloadAnchorNode);
-            downloadAnchorNode.click();
-            downloadAnchorNode.remove();
-        }
-    </script>
-</head>
-<body>
-    <h1>Google Maps Location Selector</h1>
-    <div id="map" style="height: 500px; width: 100%;"></div>
-    <pre id="locations"></pre>
-    <button onclick="downloadJSON()">Download JSON</button>
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Google Maps Location Display</title>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEehViAH5iUeosbqfg9jEiyvQ3CtQWtKg&callback=initMap" async defer></script>
-    <script>
-        let map;
+  <head>
+    <title>Google Maps</title>
+    <script src="https://cdn.jsdelivr.net/npm/@googlemaps/js-api-loader@1.12.9/dist/index.min.js"></script>
+    <script src="../javascript/index.js"></script>
+  </head>
+  <body>
+    <div id="map" style="height: 400px; width: 100%"></div>
+    <input type="file" id="fileInputLocations" accept=".json" />
+    <input type="file" id="fileInputVehicles" accept=".json" />
 
-        function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: 37.4224764, lng: -122.0842499}, // Initial center
-                zoom: 4
-            });
+    <button onclick="print_locations()">please press meee</button>
 
-            // // Load the locations from the JSON file
-            // fetch('locations.json')
-            //     .then(response => response.json())
-            //     .then(locations => {
-            //         locations.forEach(location => {
-            //             addMarker(location);
-            //         });
-            //     })
-            //     .catch(error => console.error('Error loading locations:', error));
+    <br />
+    <br />
 
-            const locations = [
-            {
-                "name": "Location 1",
-                "address": "123 Main St, Anytown, USA",
-                "latitude": 37.4224764,
-                "longitude": -122.0842499
-            },
-            {
-                "name": "Location 2",
-                "address": "456 Elm St, Othertown, USA",
-                "latitude": 40.712776,
-                "longitude": -74.005974
-            }
-        ];
+    <button id="runButton" onclick=run_algorithm() disabled>
+      run algorithm
+    </button>
 
-        locations.forEach(location => {
-                addMarker(location);
-            });
-        }
+    <div id="info">
 
-        function addMarker(location) {
-            const position = {lat: location.latitude, lng: location.longitude};
-            const marker = new google.maps.Marker({
-                position: position,
-                map: map,
-                title: location.name
-            });
-
-            const infoWindow = new google.maps.InfoWindow({
-                content: `<h3>${location.name}</h3><p>${location.address}</p>`
-            });
-
-            marker.addListener('click', () => {
-                infoWindow.open(map, marker);
-            });
-        }
-    </script>
-</head>
-<body>
-    <h1>Google Maps Location Display</h1>
-    <div id="map" style="height: 500px; width: 100%;"></div>
-</body>
+    </div>
+  </body>
 </html>

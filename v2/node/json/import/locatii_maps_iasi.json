@@ -1,0 +1,103 @@
+{
+    "locations": [
+      {
+        "name": "Location 1",
+        "address": "Bivolari",
+        "latitude": 47.5235176,
+        "longitude": 27.4049546,
+        "type": "CUSTOMER"
+      },
+      {
+        "name": "Location 2",
+        "address": "Bals",
+        "latitude": 47.2950058,
+        "longitude": 26.9658564,
+        "type": "CUSTOMER"
+      },
+      {
+        "name": "Location 3",
+        "address": "Cotnari",
+        "latitude": 47.3476395,
+        "longitude": 26.9319748,
+        "type": "CUSTOMER"
+      },
+      {
+        "name": "Location 4",
+        "address": "Podu Iloaiei",
+        "latitude": 47.2193266,
+        "longitude": 27.236072,
+        "type": "CUSTOMER"
+      },
+      {
+        "name": "Location 5",
+        "address": "Nogosesti",
+        "latitude": 47.0364788,
+        "longitude": 27.4923632,
+        "type": "CUSTOMER"
+      },
+      {
+        "name": "Location 6",
+        "address": "Dominita",
+        "latitude": 47.0354149,
+        "longitude": 27.352316,
+        "type": "CUSTOMER"
+      },
+      {
+        "name": "Location 7",
+        "address": "Barnova",
+        "latitude": 47.0788566,
+        "longitude": 27.6023124,
+        "type": "CUSTOMER"
+      },
+      {
+        "name": "Location 8",
+        "address": "Dancu",
+        "latitude": 47.1554827,
+        "longitude": 27.6446697,
+        "type": "CUSTOMER"
+      },
+      {
+        "name": "Location 9",
+        "address": "Valea Lupului",
+        "latitude": 47.1810427,
+        "longitude": 27.4714197,
+        "type": "CUSTOMER"
+      },
+      {
+        "name": "Location 10",
+        "address": "Golaiesti",
+        "latitude": 47.2357697,
+        "longitude": 27.6863623,
+        "type": "CUSTOMER"
+      },
+      {
+        "name": "Location 11",
+        "address": "Victoria",
+        "latitude": 47.2912184,
+        "longitude": 27.6054286,
+        "type": "CUSTOMER"
+      },
+      {
+        "name": "Location 12",
+        "address": "Plugari",
+        "latitude": 47.491781,
+        "longitude": 27.1003854,
+        "type": "DEPOT"
+      },
+      {
+        "name": "Location 13",
+        "address": "Scanteia",
+        "latitude": 46.9177398,
+        "longitude": 27.5354064,
+        "type": "CUSTOMER"
+      },
+      {
+        "name": "Location 14",
+        "address": "Baltati",
+        "latitude": 47.2238517,
+        "longitude": 27.1103525,
+        "type": "CUSTOMER"
+      }
+    ]
+  }
+  

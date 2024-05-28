@@ -1,0 +1,88 @@
+{
+  "locations": [
+    {
+      "name": "Location 1",
+      "address": "Bivolari",
+      "latitude": 47.5235176,
+      "longitude": 27.4049546,
+      "type": "CUSTOMER"
+    },
+    {
+      "name": "Location 2",
+      "address": "Bals",
+      "latitude": 47.2950058,
+      "longitude": 26.9658564,
+      "type": "CUSTOMER"
+    },
+    {
+      "name": "Location 10",
+      "address": "Golaiesti",
+      "latitude": 47.2357697,
+      "longitude": 27.6863623,
+      "type": "CUSTOMER"
+    },
+    {
+      "name": "Location 11",
+      "address": "Victoria",
+      "latitude": 47.2912184,
+      "longitude": 27.6054286,
+      "type": "CUSTOMER"
+    },
+    {
+      "name": "Location 12",
+      "address": "Plugari",
+      "latitude": 47.491781,
+      "longitude": 27.1003854,
+      "type": "DEPOT"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": 0,
+      "capacity": 3,
+      "depot_index": 0
+    },
+    {
+      "id": 1,
+      "capacity": 3,
+      "depot_index": 0
+    }
+  ],
+  "matrix": [
+    [
+      0,
+      76.043,
+      63.523,
+      49.343,
+      38.448
+    ],
+    [
+      73.641,
+      0,
+      79.707,
+      71.655,
+      37.578
+    ],
+    [
+      63.417,
+      79.033,
+      0,
+      10.302,
+      75.71
+    ],
+    [
+      49.238,
+      71.558,
+      10.302,
+      0,
+      61.531
+    ],
+    [
+      38.226,
+      37.595,
+      75.815,
+      61.635,
+      0
+    ]
+  ]
+}

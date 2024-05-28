@@ -1,0 +1,7 @@
+{
+    "vehicles": [
+        {"id": 0, "capacity": 1, "depot_index": 0},
+        {"id": 1, "capacity": 1, "depot_index": 0},
+        {"id": 2, "capacity": 1, "depot_index": 0}
+    ]
+}

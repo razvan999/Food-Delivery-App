@@ -1,0 +1,595 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Google Maps Location Selector</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEehViAH5iUeosbqfg9jEiyvQ3CtQWtKg&callback=initMap" async defer></script>
+    <script>
+        let map;
+        let locations = [];
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 47.1562245, lng: 27.5045704},
+                zoom: 12
+            });
+
+            map.addListener('click', function(event) {
+                addMarker(event.latLng);
+                const locationData = {
+                    name: prompt("Enter location name:"),
+                    address: prompt("Enter address:"),
+                    latitude: event.latLng.lat(),
+                    longitude: event.latLng.lng()
+                };
+                locations.push(locationData);
+                updateLocations();
+            });
+        }
+
+        function addMarker(location) {
+            new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+
+        function updateLocations() {
+            document.getElementById('locations').textContent = JSON.stringify(locations, null, 2);
+        }
+
+        function downloadJSON() {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(locations, null, 2));
+            const downloadAnchorNode = document.createElement('a');
+            downloadAnchorNode.setAttribute("href", dataStr);
+            downloadAnchorNode.setAttribute("download", "locations.json");
+            document.body.appendChild(downloadAnchorNode);
+            downloadAnchorNode.click();
+            downloadAnchorNode.remove();
+        }
+    </script>
+</head>
+<body>
+    <h1>Google Maps Location Selector</h1>
+    <div id="map" style="height: 500px; width: 100%;"></div>
+    <pre id="locations"></pre>
+    <button onclick="downloadJSON()">Download JSON</button>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Google Maps Location Display</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKSYYef5BrG4-TOUD_tGobWe9eh5iwCQo&callback=initMap" async defer></script>
+    <script>
+        let map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 47.1562245, lng: 27.5045704}, // Initial center
+                zoom: 9
+            }); -->
+
+<!-- // // Load the locations from the JSON file
+            // fetch('locations.json')
+            //     .then(response => response.json())
+            //     .then(locations => {
+            //         locations.forEach(location => {
+            //             addMarker(location);
+            //         });
+            //     })
+            //     .catch(error => console.error('Error loading locations:', error));
+
+            const locations = [
+            {
+                "name": "Location 1",
+                "address": "Bivolari",
+                "latitude": 47.5235176,
+                "longitude": 27.4049546
+            },
+            {
+                "name": "Location 2",
+                "address": "Bals",
+                "latitude": 47.2950058,
+                "longitude": 26.9658564
+            },
+            {
+                "name": "Location 3",
+                "address": "Cotnari",
+                "latitude": 47.3476395,
+                "longitude": 26.9319748
+            }
+        ];
+
+        locations.forEach(location => {
+                addMarker(location);
+            });
+        }
+
+        function addMarker(location) {
+            const position = {lat: location.latitude, lng: location.longitude};
+            const marker = new google.maps.Marker({
+                position: position,
+                map: map,
+                title: location.name
+            });
+
+            const infoWindow = new google.maps.InfoWindow({
+                content: `<h3>${location.name}</h3><p>${location.address}</p>`
+            });
+
+            marker.addListener('click', () => {
+                infoWindow.open(map, marker);
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Google Maps Location Display</h1>
+    <div id="map" style="height: 500px; width: 100%;"></div>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Map with Locations</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKSYYef5BrG4-TOUD_tGobWe9eh5iwCQo&libraries=places"></script>
+    <script>
+      var map;
+      var locations = {
+        locations: [
+          {
+            name: "Location 1",
+            address: "Bivolari",
+            latitude: 47.5235176,
+            longitude: 27.4049546,
+          },
+          {
+            name: "Location 2",
+            address: "Bals",
+            latitude: 47.2950058,
+            longitude: 26.9658564,
+          },
+          {
+            name: "Location 3",
+            address: "Cotnari",
+            latitude: 47.3476395,
+            longitude: 26.9319748,
+          },
+        ],
+      };
+
+      var newLocations = {
+      "new_locations": []
+    };
+
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 47.5, lng: 27.5},
+        zoom: 8
+      });
+
+      displayLocations();
+      
+      map.addListener('click', function(event) {
+        addLocation(event.latLng);
+      });
+    }
+
+    function displayLocations() {
+      var bounds = new google.maps.LatLngBounds();
+      
+      locations.locations.forEach(function(location) {
+        var marker = new google.maps.Marker({
+          position: {lat: location.latitude, lng: location.longitude},
+          map: map,
+          title: location.name
+        });
+        
+        bounds.extend(marker.getPosition());
+      });
+      
+      map.fitBounds(bounds);
+    }
+
+    function addLocation(latLng) {
+      var name = prompt("Enter the name of the new location:");
+      if (name) {
+        var address = prompt("Enter the address of the new location:");
+        if (address) {
+          var newLocation = {
+            "name": name,
+            "address": address,
+            "latitude": latLng.lat(),
+            "longitude": latLng.lng()
+          };
+          newLocations.new_locations.push(newLocation);
+          displayNewLocations();
+
+          console.log(locations);
+          console.log(newLocations);
+          console.log("-------------------------");
+        }
+      }
+    }
+
+    function displayNewLocations() {
+      newLocations.new_locations.forEach(function(location) {
+        var marker = new google.maps.Marker({
+          position: {lat: location.latitude, lng: location.longitude},
+          map: map,
+          title: location.name,
+          icon: {
+            url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+          }
+        });
+      });
+    }
+  </script>
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body onload="initMap()">
+  <div id="map"></div>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Distance Matrix Calculator</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKSYYef5BrG4-TOUD_tGobWe9eh5iwCQo&libraries=places"></script>
+  <script>
+    // Function to calculate distance between two locations using Google Maps Directions Service
+    function calculateDistance(location1, location2, callback) {
+        var directionsService = new google.maps.DirectionsService();
+        var request = {
+            origin: new google.maps.LatLng(location1.latitude, location1.longitude),
+            destination: new google.maps.LatLng(location2.latitude, location2.longitude),
+            travelMode: google.maps.TravelMode.DRIVING
+        };
+        directionsService.route(request, function(response, status) {
+            if (status == google.maps.DirectionsStatus.OK) {
+                var distance = response.routes[0].legs[0].distance.value; // Distance in meters
+                callback(distance);
+            } else {
+                console.error("Error fetching directions: " + status);
+                callback(null);
+            }
+        });
+    }
+
+    // Function to calculate distance matrix using Google Maps Directions Service
+    function calculateDistanceMatrix(locations) {
+        const numLocations = locations.length;
+        const distanceMatrix = [];
+
+        // Create a promise to handle asynchronous requests
+        function calculateDistancePromise(location1, location2) {
+            return new Promise((resolve, reject) => {
+                calculateDistance(location1, location2, distance => {
+                    resolve(distance);
+                });
+            });
+        }
+
+        // Iterate over each pair of locations and calculate distance asynchronously
+        async function calculateDistancesAsync() {
+            for (let i = 0; i < numLocations; i++) {
+                distanceMatrix[i] = [];
+                for (let j = 0; j < numLocations; j++) {
+                    const distance = await calculateDistancePromise(locations[i], locations[j]);
+                    distanceMatrix[i][j] = distance;
+                }
+            }
+            // Display the distance matrix in the console
+            console.log("Distance Matrix:");
+            console.table(distanceMatrix);
+        }
+
+        calculateDistancesAsync(); // Start asynchronous distance calculation
+    }
+
+    // Assuming 'locations' is your array of locations
+    const locations = {
+        "locations": [
+    {
+      "name": "Location 1",
+      "address": "Bivolari",
+      "latitude": 47.5235176,
+      "longitude": 27.4049546
+    },
+    {
+      "name": "Location 2",
+      "address": "Bals",
+      "latitude": 47.2950058,
+      "longitude": 26.9658564
+    },
+    {
+      "name": "Location 3",
+      "address": "Cotnari",
+      "latitude": 47.3476395,
+      "longitude": 26.9319748
+    },
+    {
+      "name": "Location 4",
+      "address": "Podu Iloaiei",
+      "latitude": 47.2193266,
+      "longitude": 27.236072
+    },
+    {
+      "name": "Location 5",
+      "address": "Nogosesti",
+      "latitude": 47.0364788,
+      "longitude": 27.4923632
+    },
+    {
+      "name": "Location 6",
+      "address": "Dominita",
+      "latitude": 47.0354149,
+      "longitude": 27.352316
+    },
+    {
+      "name": "Location 7",
+      "address": "Barnova",
+      "latitude": 47.0788566,
+      "longitude": 27.6023124
+    },
+    {
+      "name": "Location 8",
+      "address": "Dancu",
+      "latitude": 47.1554827,
+      "longitude": 27.6446697
+    },
+    {
+      "name": "Location 9",
+      "address": "Valea Lupului",
+      "latitude": 47.1810427,
+      "longitude": 27.4714197
+    },
+    {
+      "name": "Location 10",
+      "address": "Golaiesti",
+      "latitude": 47.2357697,
+      "longitude": 27.6863623
+    },
+    {
+      "name": "Location 11",
+      "address": "Victoria",
+      "latitude": 47.2912184,
+      "longitude": 27.6054286
+    },
+    {
+      "name": "Location 12",
+      "address": "Plugari",
+      "latitude": 47.491781,
+      "longitude": 27.1003854
+    },
+    {
+      "name": "Location 13",
+      "address": "Scanteia",
+      "latitude": 46.9177398,
+      "longitude": 27.5354064
+    },
+    {
+      "name": "Location 14",
+      "address": "Baltati",
+      "latitude": 47.2238517,
+      "longitude": 27.1103525
+    }
+  ]
+    };
+
+    // Replace YOUR_API_KEY with your actual Google Maps API key
+    calculateDistanceMatrix(locations.locations);
+  </script>
+</head>
+<body>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Distance Matrix Calculator</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKSYYef5BrG4-TOUD_tGobWe9eh5iwCQo&libraries=places"></script>
+    <script>
+      var map;
+      var locations = {
+        locations: [
+          {
+            name: "Location 1",
+            address: "Bivolari",
+            latitude: 47.5235176,
+            longitude: 27.4049546,
+          },
+          {
+            name: "Location 2",
+            address: "Bals",
+            latitude: 47.2950058,
+            longitude: 26.9658564,
+          },
+          {
+            name: "Location 3",
+            address: "Cotnari",
+            latitude: 47.3476395,
+            longitude: 26.9319748,
+          },
+          {
+            name: "Location 4",
+            address: "Podu Iloaiei",
+            latitude: 47.2193266,
+            longitude: 27.236072,
+          },
+          {
+            name: "Location 5",
+            address: "Nogosesti",
+            latitude: 47.0364788,
+            longitude: 27.4923632,
+          },
+          {
+            name: "Location 6",
+            address: "Dominita",
+            latitude: 47.0354149,
+            longitude: 27.352316,
+          },
+          {
+            name: "Location 7",
+            address: "Barnova",
+            latitude: 47.0788566,
+            longitude: 27.6023124,
+          },
+          {
+            name: "Location 8",
+            address: "Dancu",
+            latitude: 47.1554827,
+            longitude: 27.6446697,
+          },
+          {
+            name: "Location 9",
+            address: "Valea Lupului",
+            latitude: 47.1810427,
+            longitude: 27.4714197,
+          },
+          {
+            name: "Location 10",
+            address: "Golaiesti",
+            latitude: 47.2357697,
+            longitude: 27.6863623,
+          },
+          {
+            name: "Location 11",
+            address: "Victoria",
+            latitude: 47.2912184,
+            longitude: 27.6054286,
+          },
+          {
+            name: "Location 12",
+            address: "Plugari",
+            latitude: 47.491781,
+            longitude: 27.1003854,
+          },
+          {
+            name: "Location 13",
+            address: "Scanteia",
+            latitude: 46.9177398,
+            longitude: 27.5354064,
+          },
+          {
+            name: "Location 14",
+            address: "Baltati",
+            latitude: 47.2238517,
+            longitude: 27.1103525,
+          },
+        ],
+      };
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: 47.5, lng: 27.5 },
+          zoom: 8,
+        });
+
+        displayLocations();
+
+        map.addListener("click", function (event) {
+          addLocation(event.latLng);
+        });
+      }
+
+      function displayLocations() {
+        locations.locations.forEach(function (location) {
+          var marker = new google.maps.Marker({
+            position: { lat: location.latitude, lng: location.longitude },
+            map: map,
+            title: location.name,
+          });
+        });
+      }
+
+      function addLocation(latLng) {
+        var name = prompt("Enter the name of the new location:");
+        if (name) {
+          var newLocation = {
+            name: name,
+            latitude: latLng.lat(),
+            longitude: latLng.lng(),
+          };
+          locations.locations.push(newLocation);
+          displayLocations();
+        }
+      }
+
+      function calculateDistance(location1, location2, callback) {
+        var directionsService = new google.maps.DirectionsService();
+        var request = {
+          origin: new google.maps.LatLng(
+            location1.latitude,
+            location1.longitude
+          ),
+          destination: new google.maps.LatLng(
+            location2.latitude,
+            location2.longitude
+          ),
+          travelMode: google.maps.TravelMode.DRIVING,
+        };
+        directionsService.route(request, function (response, status) {
+          if (status == google.maps.DirectionsStatus.OK) {
+            var distance = response.routes[0].legs[0].distance.value; // Distance in meters
+            callback(distance);
+          } else {
+            console.error("Error fetching directions: " + status);
+            callback(null);
+          }
+        });
+      }
+
+      function calculateDistanceMatrix(locations) {
+        const numLocations = locations.length;
+        const distanceMatrix = [];
+
+        function calculateDistancePromise(location1, location2) {
+          return new Promise((resolve, reject) => {
+            calculateDistance(location1, location2, (distance) => {
+              resolve(distance);
+            });
+          });
+        }
+
+        async function calculateDistancesAsync() {
+          for (let i = 0; i < numLocations; i++) {
+            distanceMatrix[i] = [];
+            for (let j = 0; j < numLocations; j++) {
+              const distance = await calculateDistancePromise(
+                locations[i],
+                locations[j]
+              );
+              distanceMatrix[i][j] = distance;
+            }
+          }
+          console.log("Distance Matrix:");
+          console.table(distanceMatrix);
+        }
+
+        calculateDistancesAsync();
+      }
+    </script>
+  </head>
+
+
+
+  <body onload="initMap()">
+    <div id="map" style="height: 400px; width: 100%"></div>
+    <button onclick="calculateDistanceMatrix(locations.locations)">
+      Calculate Distance Matrix
+    </button>
+
+
+    
+  </body>
+</html>

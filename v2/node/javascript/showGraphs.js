@@ -1,27 +1,3 @@
-// {
-//     "type": "output",
-//     "data": [
-//       { "node_index": 1, "x": 38.24, "y": 20.42 },
-//       { "node_index": 2, "x": 39.57, "y": 26.15 },
-//       { "node_index": 3, "x": 40.56, "y": 25.32 },
-//       { "node_index": 4, "x": 36.26, "y": 23.12 },
-//       { "node_index": 5, "x": 33.48, "y": 10.54 },
-//       { "node_index": 6, "x": 37.56, "y": 12.19 },
-//       { "node_index": 7, "x": 38.42, "y": 13.11 },
-//       { "node_index": 8, "x": 37.52, "y": 20.44 },
-//       { "node_index": 9, "x": 41.23, "y": 9.1 },
-//       { "node_index": 10, "x": 41.17, "y": 3.05 },
-//       { "node_index": 11, "x": 36.08, "y": -5.21 },
-//       { "node_index": 12, "x": 38.47, "y": 15.13 },
-//       { "node_index": 13, "x": 38.15, "y": 15.35 },
-//       { "node_index": 14, "x": 37.51, "y": 15.17 },
-//       { "node_index": 15, "x": 35.49, "y": 1.32 },
-//       { "node_index": 16, "x": 39.36, "y": 1.56 }
-//     ]
-//   }
-
-// ulysses-n16-k3
-
 const ws = new WebSocket("ws://localhost:3000/details");
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -122,8 +98,9 @@ function fetchInputData(selectedValue) {
       return response.json();
     })
     .then((receivedData) => {
-      inputData = receivedData.data;
-      // console.log(inputData);
+      inputData = receivedData;
+      console.log("Input data:");
+      console.log(inputData);
       drawGraph(inputData, true);
     })
     .catch((error) => {
@@ -148,7 +125,8 @@ function fetchOutputData(selectedValue) {
       return response.json();
     })
     .then((receivedData) => {
-      outputData = receivedData.data;
+      outputData = receivedData;
+      console.log("Output data:");
         console.log(outputData);
       drawGraph(outputData, false);
     })
@@ -160,16 +138,259 @@ function fetchOutputData(selectedValue) {
     });
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function setParagraphData(data, isInput){
+  let paragraphData = "";
+
+  if (isInput) {
+    paragraphData += "Input data <br>"
+    
+    data.tours.forEach((tour, index) => {
+      paragraphData += `<br>tour: ${index + 1}<br>`;
+      paragraphData += `route: ${tour.route} <br>`;
+      paragraphData += `cost: ${tour.cost}<br>`;
+    });
+  }
+  else {
+    paragraphData += "Output data:<br>";
+
+    data.tours.forEach((tour, index) => {
+      paragraphData += `<br>tour: ${index + 1}<br>`;
+      paragraphData += `route: ${tour.route} <br>`;
+      paragraphData += `cost: ${tour.cost}<br>`;
+    });
+
+    paragraphData += `<br>population_size: ${data.population_size}<br>`;
+    paragraphData += `generation_limit: ${data.generation_limit}<br>`;
+    paragraphData += `crossover_prob: ${data.crossover_prob}<br>`;
+    paragraphData += `mutation_rate: ${data.mutation_rate}<br>`;
+    paragraphData += `initial_cost: ${data.initial_cost}<br>`;
+    paragraphData += `final_cost: ${data.final_cost}<br>`;
+    paragraphData += `time: ${data.time}s<br>`;
+  }  
+
+  return paragraphData;
+}
+
+const handleMouseOver = function(event, d) {
+  d3.select("#info")
+    .style("opacity", 1)
+    .style("left", (event.pageX + 5) + "px")
+    .style("top", (event.pageY - 28) + "px")
+    .style("background", d.color)
+    .style("color", "white")
+    .html(`index: ${d.node_index}`);
+};
+
+const handleMouseOut = function(event, d) {
+  d3.select("#info")
+    .style("opacity", 0);
+};
+
 function drawGraph(data, isInputData) {
   const width = 600;
   const height = 600;
   const spacing = 100;
-
-  const tours = [
-    { route: [10, 8, 9, 6, 5], cost: 12 },
-    { route: [14, 13, 12, 11, 4], cost: 15 },
-    { route: [3, 1, 2, 15, 7], cost: 4 },
-  ];
 
   let container;
   if (isInputData) {
@@ -188,12 +409,12 @@ function drawGraph(data, isInputData) {
 
   const xScale = d3
     .scaleLinear()
-    .domain([d3.min(data, (d) => d.x), d3.max(data, (d) => d.x)])
+    .domain([d3.min(data.data, (d) => d.x), d3.max(data.data, (d) => d.x)])
     .range([0, width - spacing]);
 
   const yScale = d3
     .scaleLinear()
-    .domain([d3.min(data, (d) => d.y), d3.max(data, (d) => d.y)])
+    .domain([d3.min(data.data, (d) => d.y), d3.max(data.data, (d) => d.y)])
     .range([height - spacing, 0]);
 
   const xAxis = d3.axisBottom(xScale);
@@ -223,25 +444,25 @@ function drawGraph(data, isInputData) {
     "violet",
     "indigo",
   ];
-  if (colors.length < tours.length) {
+  if (colors.length < data.tours.length) {
     alert("Not enough colors for all tours");
   }
-
   const lineGenerator = d3
     .line()
-    .x((d) => xScale(d[0]))
-    .y((d) => yScale(d[1]));
+    .x((d) => xScale(d.x))
+    .y((d) => yScale(d.y));
 
-  for (let i = 0; i < tours.length; i++) {
+  for (let i = 0; i < data.tours.length; i++) {
     const linePoints = [];
-    for (let j = 0; j < tours[i].route.length; j++) {
-      const pointIndex = tours[i].route[j] - 1;
-      linePoints.push([data[pointIndex].x, data[pointIndex].y]);
+    for (let j = 0; j < data.tours[i].route.length; j++) {
+      const pointIndex = data.tours[i].route[j] - 1;
+      let point = data.data[pointIndex];
+      point.color = colors[i];
+      linePoints.push(point);
     }
-    linePoints.push([
-      data[tours[i].route[0] - 1].x,
-      data[tours[i].route[0] - 1].y,
-    ]);
+    let lastPoint = data.data[data.tours[i].route[0] - 1];
+    lastPoint.color = colors[i];
+    linePoints.push(lastPoint);
 
     svg
       .append("path")
@@ -256,22 +477,25 @@ function drawGraph(data, isInputData) {
       .data(linePoints)
       .enter()
       .append("circle")
-      .attr("cx", (d) => xScale(d[0]))
-      .attr("cy", (d) => yScale(d[1]))
+      .attr("cx", (d) => xScale(d.x))
+      .attr("cy", (d) => yScale(d.y))
       .attr("r", 5)
-      .style("fill", colors[i]);
+      .style("fill", colors[i])
+      .on("mouseover", handleMouseOver)
+      .on("mouseout", handleMouseOut);
   }
 
   let div;
   const paragraph = document.createElement("p");
   paragraph.className = "description";
 
+
   if (isInputData) {
     div = document.getElementById("container_input");
-    paragraph.textContent = "Input";
+    paragraph.innerHTML = setParagraphData(data, true);
   } else {
     div = document.getElementById("container_output");
-    paragraph.textContent = "Output";
+    paragraph.innerHTML = setParagraphData(data, false);
   }
 
   div.appendChild(paragraph);

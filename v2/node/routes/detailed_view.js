@@ -117,11 +117,6 @@ function runCpp(fileName) {
   });
 }
 
-
-
-
-
-
 router.use("/getdata", jsonRouter);
 
 module.exports = { router, wss };
