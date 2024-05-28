@@ -1,8 +1,7 @@
 const ws_maps = new WebSocket("ws://localhost:3000/");
 
 const loader = new google.maps.plugins.loader.Loader({
-  //   apiKey: "",
-  apiKey: "AIzaSyCKSYYef5BrG4-TOUD_tGobWe9eh5iwCQo",
+    apiKey: "",
   version: "beta",
 });
 
