@@ -36,6 +36,9 @@ int main()
     cout << endl
          << endl;
 
+     // print_population(population);
+     // print_routes(best_initial_solution);
+
     float initial_cost = population.total_cost;
     cout << "------Start Genetic Algorithm------" << endl;
     int generation = 0;
@@ -64,6 +67,8 @@ int main()
 
     // Solution best_solution = generate_solution(graph, vehicles);
     // print_routes(best_solution);
+
+    cout << "best_cost: " << best_solution.cost << endl;
 
     // print_matrix();
     write_json_output_maps(best_solution, elapsed_seconds);

@@ -15,8 +15,8 @@
 bool maps_flag = false;
 vector<vector<double>> cost_matrix;
 
-#define population_size 2 // mereu par
-#define generation_limit 1
+#define population_size 1000 // mereu par
+#define generation_limit 20
 #define crossover_prob 0.84
 #define mutation_rate 0.05
 #define epsilon 0.0001

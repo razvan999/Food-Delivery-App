@@ -5,13 +5,13 @@
 },
 {
 "vehicle": 0,
-"route": [4, 1, 4]
+"route": [4, 1, 5, 4]
 }],
-"population_size": 2,
-"generation_limit": 1,
+"population_size": 1000,
+"generation_limit": 20,
 "crossover_prob": 0.840000,
 "mutation_rate": 0.050000,
-"initial_cost": 248.753998,
-"final_cost": 248.753998,
-"time": 0.000816}
+"initial_cost": 474.573975,
+"final_cost": 474.573975,
+"time": 11.056007}
 

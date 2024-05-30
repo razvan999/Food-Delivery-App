@@ -972,7 +972,7 @@ void mutate_solution(Vehicles vehicles, Solution& solution) {
 	index1 = get_random_int(solution.routes[random_route_index].size() - 2, 1);
 	do {
 		index2 = get_random_int(solution.routes[random_route_index].size() - 2, 1);
-	} while (index1 == index2);
+	} while (index1 == index2 && solution.routes[random_route_index].size() > 3);
 
 	auto aux = solution.routes[random_route_index][index1];
 	Route mutated_route;
