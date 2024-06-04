@@ -1,0 +1,19 @@
+.configurationSelectionContainer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.configurationSelectionContainer select{
+    margin: 10px;
+    width: 200px;
+}
+
+.configBtn {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}

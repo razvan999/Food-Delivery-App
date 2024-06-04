@@ -1,0 +1,9 @@
+.actionsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.actionsContainer button {
+    margin: 5px;
+}

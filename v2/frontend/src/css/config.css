@@ -1,0 +1,15 @@
+:root {
+    --font-color: #303030;
+
+    --white: white;
+    --beige: #F7EFE5;
+    --light-purple: #C3ACD0;
+    --purple: #674188;
+  }
+
+  @font-face {
+    font-family: 'Noto Sans Sora Sompeng';
+    src: url('../fonts/Noto_Sans_Sora_Sompeng/NotoSansSoraSompeng-VariableFont_wght.ttf') format('truetype');
+    font-family: 'Lilita One';
+    src: url('../fonts/Lilita_One/LilitaOne-Regular.ttf') format('truetype');
+  }

@@ -1,0 +1,181 @@
+#functionality-container {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: space-between;
+}
+#Seeeearch{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
+}
+
+
+
+
+
+#topbar {
+  display: flex;
+  width: 100%;
+  height: 0px;
+  margin: 0;
+  padding: 0;
+}
+
+#searchbar {
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.inputDiv {
+  width: 100%;
+}
+
+#searchbar input {
+  border: none;
+  border-radius: 10px;
+  width: 400px;
+  height: 30px;
+  box-shadow: 0px 0px 8px var(--purple);
+  padding: 5px;
+  padding-left: px;
+  margin: 20px;
+}
+
+#card-container {
+  margin: 0;
+  padding: 20px;
+  z-index: 1;
+
+  width: 40%;
+}
+
+#card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px var(--purple);
+  overflow-y: scroll;
+
+  padding: 20px;
+  height: calc(100vh - 100px);
+}
+
+#card::-webkit-scrollbar {
+  width: 5px;
+}
+
+#card::-webkit-scrollbar-thumb {
+  background-color: var(--purple);
+  border-radius: 0px 10px 10px 0px;
+}
+
+#card::-webkit-scrollbar-track {
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#toggleFunctionality {
+  background-color: var(--white);
+  color: var(--font-color);
+  height: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px var(--purple);
+
+  font-size: 25px;
+
+  width: 60px;
+  height: 40px;
+}
+
+#toggleFunctionality p {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+
+  padding-top: 7px;
+}
+
+#title {
+  margin-top: 0;
+  width: 80%;
+}
+
+#title p {
+  margin-top: 0;
+  color: var(--font-color);
+  font-family: "Lilita One", "cursive";
+  font-size: 50px;
+  text-align: left;
+  margin-bottom: 35px;
+}
+
+#title p:hover {
+  color: var(--purple);
+}
+
+@media screen and (max-width: 768px) {
+  #functionality-container {
+    flex-direction: column;
+  }
+
+  #title p {
+    font-size: 20px;
+  }
+
+  #toggleFunctionality {
+    display: block;
+    margin-top: 20px;
+    /* margin-left: 0; */
+  }
+
+  
+  #searchbar {
+    /* width: 90%; */
+    /* margin-top: 20px; */
+    
+    display: flex;
+    justify-content: space-between;
+    /* margin-right: 0; */
+  }
+  
+  #searchbar input {
+    width: 90%;
+    /* width: 800px; */
+    margin-left: 10px;
+    margin-right: 0px;
+  }
+  .gm-bundled-control.gm-bundled-control-on-bottom {
+    display: none;
+  }
+
+  #topbar {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    top: 0;
+    left: calc(5% - 10px);
+    left: 0;
+  }
+
+  #card-container {
+    height: auto;
+    margin-top: 50px;
+  }
+
+  #card {
+    width: 80%;
+    position: absolute;
+    height: auto;
+    left: calc(10% - 20px);
+  }
+}

@@ -1,0 +1,54 @@
+.inputClass {
+  border: 2px solid var(--light-purple);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  outline: none;
+}
+
+.inputClass:focus {
+  border: 2px solid var(--purple);
+}
+
+.vehiclesContainer {
+  display: block;
+}
+
+.formConteiner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.vehicleForm {
+  margin: 10px;
+}
+
+.vehicleTitle {
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--light-purple);
+
+  font-family: "Noto Sans Sora Sompeng", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.vehicleSelector {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+}
+.vehicleSelector p {
+  margin: 0;
+  margin-right: 10px;
+  font-family: "Noto Sans Sora Sompeng", sans-serif;
+  padding: 5px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.vehiclesContainer button {
+  margin: 10px;
+}

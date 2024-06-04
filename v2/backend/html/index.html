@@ -1,0 +1,92 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Maps</title>
+    <script src="https://cdn.jsdelivr.net/npm/@googlemaps/js-api-loader@1.12.9/dist/index.min.js"></script>
+    <script src="../javascript/index.js"></script>
+  </head>
+  <body>
+    <div id="map" style="height: 400px; width: 100%"></div>
+    <input type="file" id="fileInputLocations" accept=".json" />
+    <input type="file" id="fileInputVehicles" accept=".json" />
+
+    <button onclick="print_locations()">please press meee</button>
+
+    <br />
+    <br />
+
+    <button id="runButton" onclick=run_algorithm() disabled>
+      run algorithm
+    </button>
+
+    <div id="info">
+
+    </div>
+  </body>
+</html> -->
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Maps Tour</title>
+</head>
+<body>
+  <button id="logTour">Log Tour Link</button>
+
+  <script>
+    // Sample tour data
+    const tourData = {
+      "tour": [
+        {
+          "name": "Location 1",
+          "address": "Bivolari",
+          "latitude": 47.5235176,
+          "longitude": 27.4049546,
+        }, 
+        {
+          "name": "Location 2",
+          "address": "Bals",
+          "latitude": 47.2950058,
+          "longitude": 26.9658564,
+        },
+        {
+          "name": "Location 10",
+          "address": "Golaiesti",
+          "latitude": 47.2357697,
+          "longitude": 27.6863623,
+        },
+        {
+          "name": "Location 1",
+          "address": "Bivolari",
+          "latitude": 47.5235176,
+          "longitude": 27.4049546,
+        }
+      ]
+    };
+
+    document.getElementById('logTour').addEventListener('click', function() {
+      // Extract the waypoints
+      const waypoints = tourData.tour.map(location => 
+        `${location.latitude},${location.longitude}`
+      );
+
+      // Construct the Google Maps URL
+      const origin = waypoints[0];
+      const destination = waypoints[waypoints.length - 1];
+      const waypointStr = waypoints.slice(1, waypoints.length - 1).join('|');
+
+      const mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&waypoints=${waypointStr}`;
+
+      // Log the URL to the console
+      console.log(mapsUrl);
+    });
+  </script>
+</body>
+</html>

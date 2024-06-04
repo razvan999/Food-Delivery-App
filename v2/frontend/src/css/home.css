@@ -1,0 +1,35 @@
+#map {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.titleClass {
+  margin-top: 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--light-purple);
+
+  font-family: "Noto Sans Sora Sompeng", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+select {
+  outline: none;
+  border: 2px solid var(--light-purple);
+  border-radius: 5px;
+  background-color: var(--white);
+  color: var(--font-color);
+  padding: 5px;
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--purple);
+}
+
+.btnWidth {
+  width: 130px;
+}

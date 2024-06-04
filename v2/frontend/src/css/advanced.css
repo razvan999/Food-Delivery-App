@@ -1,0 +1,10 @@
+.advanceContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.advanceContainer button {
+    margin: 5px;
+}
+
