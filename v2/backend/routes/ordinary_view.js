@@ -3,17 +3,11 @@ const router = express.Router();
 const fs = require("fs");
 const path = require("path");
 const jsonRouter = require("./get_data");
-const bodyParser = require('body-parser');
+const bodyParser = require("body-parser");
 
 const WebSocket = require("ws");
 const ws_maps = new WebSocket.Server({ noServer: true });
 const { exec } = require("child_process");
-
-
-
-
-
-
 
 router.use(bodyParser.json());
 
@@ -32,10 +26,7 @@ router.get("/", (req, res) => {
 });
 
 router.delete("/delete-json-maps", (req, res) => {
-  const filePath = path.join(
-    __dirname,
-    "../json/maps_cpp/input_maps_cpp.json"
-  );
+  const filePath = path.join(__dirname, "../json/maps_cpp/input_maps_cpp.json");
 
   if (fs.existsSync(filePath)) {
     fs.unlink(filePath, (err) => {
@@ -49,20 +40,25 @@ router.delete("/delete-json-maps", (req, res) => {
 });
 
 // primesc data si salvez in fisier
-router.post('/sendData', (req, res) => {
+router.post("/sendData", (req, res) => {
   const receivedData = req.body;
   // console.log('Received data from client:', receivedData);
 
-const jsonString = JSON.stringify(receivedData, null, 2);
-  fs.writeFile('./json/maps_cpp/input_maps_cpp.json', jsonString, 'utf8', (err) => {
-    if (err) {
-      console.error('Error writing JSON to file:', err);
-      return;
+  const jsonString = JSON.stringify(receivedData, null, 2);
+  fs.writeFile(
+    "./json/maps_cpp/input_maps_cpp.json",
+    jsonString,
+    "utf8",
+    (err) => {
+      if (err) {
+        console.error("Error writing JSON to file:", err);
+        return;
+      }
+      console.log("JSON data has been saved to input_maps_cpp.json");
     }
-    console.log('JSON data has been saved to input_maps_cpp.json');
-  });
+  );
 
-  res.status(200).send('Data received successfully');
+  res.status(200).send("Data received successfully");
 });
 
 // un fel de notificare...
@@ -82,7 +78,7 @@ ws_maps.on("connection", function connection(ws) {
             __dirname,
             "../json/maps_cpp/input_maps_cpp.json"
           );
-  
+
           const interval = setInterval(async () => {
             const fileExists = await checkFileExists(filePath, interval);
             if (fileExists) {
@@ -118,53 +114,37 @@ function checkFileExists(filePath, interval) {
   });
 }
 
-
 function runCpp(callback) {
   console.log("Running C++ program...");
 
-  const cppFilePath = path.join(__dirname, "..", "cpp", "main_maps.cpp");
-  exec(`g++ ${cppFilePath} -o ${__dirname}/../cpp/a.out`, (error, stdout, stderr) => {
-    if (error) {
-      console.error(`Compilation error: ${error}`);
-      callback(false);
-      return;
-    }
-
-    exec(`${__dirname}/../cpp/a.out`, (error, stdout, stderr) => {
+  // const cppFilePath = path.join(__dirname, "..", "cpp", "main_maps.cpp");
+  const cppFilePath = path.join(__dirname, "..", "cpp", "test_maps.cpp");
+  exec(
+    `g++ ${cppFilePath} -o ${__dirname}/../cpp/a.out`,
+    (error, stdout, stderr) => {
       if (error) {
-        console.error(`Execution error: ${error}`);
+        console.error(`Compilation error: ${error}`);
         callback(false);
         return;
       }
-      console.log(`stdout: ${stdout}`);
-      console.error(`stderr: ${stderr}`);
 
-      if (!stderr) {
-        console.log("C++ program executed successfully");
-        callback(true);
-      }
-    });
-  });
+      exec(`${__dirname}/../cpp/a.out`, (error, stdout, stderr) => {
+        if (error) {
+          console.error(`Execution error: ${error}`);
+          callback(false);
+          return;
+        }
+        console.log(`stdout: ${stdout}`);
+        console.error(`stderr: ${stderr}`);
+
+        if (!stderr) {
+          console.log("C++ program executed successfully");
+          callback(true);
+        }
+      });
+    }
+  );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

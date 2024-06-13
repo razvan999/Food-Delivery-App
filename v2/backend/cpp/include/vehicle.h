@@ -22,16 +22,6 @@ public:
         this->location = depot.location;
     }
 
-    //     Vehicle(const json& data) {
-    //     // Parse JSON data to initialize members
-    //     id = data.at("id").get<int>();
-    //     // capacity = data.at("capacity").get<float>();
-    //     // depot_id = data.at("depot_id").get<int>(); // Assuming depot_id is present in JSON
-    //     // Initialize depot using JSON data, assuming depot is a Node
-    //     // depot = Node(data.at("depot")); // Assuming Node has a constructor that takes JSON data
-    //     // location = depot.location;
-    // }
-
     ~Vehicle() = default;
 
     int get_id() {
@@ -77,5 +67,9 @@ public:
 
     int get_depot_id() {
         return this->depot_id;
+    }
+
+    float get_unused_capacity() {
+        return this->capacity - this->used_capacity;
     }
 };

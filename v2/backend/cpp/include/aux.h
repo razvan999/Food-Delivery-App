@@ -129,7 +129,7 @@ void from_json(const json &j, aux &vehicle)
   j.at("depot_index").get_to(vehicle.depot_id);
 }
 
-bool readJsonFile(const char *filePath, Graph &graph, Vehicles &vehicles)
+bool readJsonFile(const char *filePath, Graph &graph, Vehicles &vehicles, Configuration &configuration)
 {
   ifstream file;
   file.open(filePath);
@@ -169,68 +169,57 @@ bool readJsonFile(const char *filePath, Graph &graph, Vehicles &vehicles)
     vehicles.push_back(v);
   }
 
-cost_matrix = jsonData.at("matrix").get<vector<vector<double>>>();
+  cost_matrix = jsonData.at("matrix").get<vector<vector<double>>>();
+
+  string selection = jsonData.at("selection").get<string>();
+  string crossover = jsonData.at("crossover").get<string>();
+  string population_sizeaa = jsonData.at("population_size").get<string>();
+  string generation_limitaa = jsonData.at("generation_limit").get<string>();
+
+  configuration = Configuration(selection, crossover, population_sizeaa, generation_limitaa);
 
   return true;
 }
 
-void initialize_maps(Graph &graph, Vehicles &vehicles)
+void initialize_maps(Graph &graph, Vehicles &vehicles, Configuration &configuration)
 {
   maps_flag = true;
-  
+  const char *filePath = "./json/maps_cpp/input_maps_cpp.json"; // browser
   // const char *filePath = "../json/maps_cpp/input_maps_cpp.json"; // terminal
-  const char *filePath = "./json/maps_cpp/input_maps_cpp.json";
-  if (!readJsonFile(filePath, graph, vehicles))
+  if (!readJsonFile(filePath, graph, vehicles, configuration))
   {
     return;
   }
 }
-
-void write_json_output_maps(Solution best_solution, chrono::duration<double> elapsed_seconds)
+void write_json_output_maps(const Solution &best_solution, chrono::duration<double> elapsed_seconds)
 {
   auto time = elapsed_seconds.count();
 
-  ofstream outfile ("./json/maps_cpp/output_maps_cpp.json"); // asta ii pt browser
-  // ofstream outfile("../json/maps_cpp/output_maps_cpp.json"); // asta ii pt test terminal
+  ofstream outfile("./json/maps_cpp/output_maps_cpp.json"); // For browser
+  // ofstream outfile("../json/maps_cpp/output_maps_cpp.json"); // For terminal testing
   if (!outfile)
   {
     cerr << "Error: Unable to create file" << endl;
     return;
   }
 
-  string jsonContent;
-  jsonContent += "{\"tours\": [\n";
-
+  json output;
+  output["tours"] = json::array();
   for (int i = 0; i < best_solution.routes.size(); i++)
   {
-    jsonContent += "{\n";
-    jsonContent += "\"vehicle\": " + to_string(best_solution.vehicles_indexes[i]) + ",\n";
-    jsonContent += "\"route\": [";
-    for (int j = 0; j < best_solution.routes[i].size(); j++)
+    json tour;
+    tour["vehicle"] = best_solution.vehicles_indexes[i];
+    tour["route"] = json::array();
+    for (const auto &node : best_solution.routes[i])
     {
-      jsonContent += to_string(best_solution.routes[i][j].id);
-      if (j != best_solution.routes[i].size() - 1)
-      {
-        jsonContent += ", ";
-      }
+      tour["route"].push_back(node.id);
     }
-    jsonContent += "]\n";
-    jsonContent += "}";
-    if (i != best_solution.routes.size() - 1)
-    {
-      jsonContent += ",\n";
-    }
+    tour["cost"] = best_solution.cost;
+    output["tours"].push_back(tour);
   }
+  output["final_cost"] = best_solution.cost;
+  output["time"] = time;
 
-  jsonContent += "],\n";
-  jsonContent += "\"population_size\": " + to_string(population_size) + ",\n";
-  jsonContent += "\"generation_limit\": " + to_string(generation_limit) + ",\n";
-  jsonContent += "\"crossover_prob\": " + to_string(crossover_prob) + ",\n";
-  jsonContent += "\"mutation_rate\": " + to_string(mutation_rate) + ",\n";
-  jsonContent += "\"initial_cost\": " + to_string(best_solution.cost) + ",\n";
-  jsonContent += "\"final_cost\": " + to_string(best_solution.cost) + ",\n";
-  jsonContent += "\"time\": " + to_string(time) + "}\n";
-
-  outfile << jsonContent << endl;
+  outfile << output.dump(4) << endl;
   outfile.close();
 }

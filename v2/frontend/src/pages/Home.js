@@ -2,6 +2,10 @@ import React, { useRef, useState } from "react";
 import Map from "../components/Map";
 import Functionality from "../components/Functionality";
 
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import "../css/home.css";
 
 function Home() {
@@ -9,6 +13,9 @@ function Home() {
   const [importFileLocations, setImportFileLocations] = useState(() => {});
   const [locationType, setLocationType] = useState(true);
   const [locations, setLocations] = useState([]);
+  const [highlightMarker, setHighlightMarker] = useState(() => {});
+
+  const notify = (message) => toast(message);
 
   return (
     <div>
@@ -18,6 +25,9 @@ function Home() {
         setLocationType={setLocationType}
         locationType={locationType}
         locations={locations}
+        highlightMarker={highlightMarker}
+        notify={notify}
+        setLocations={setLocations}
       />
       <Map
         setMapInstance={setMapInstance}
@@ -25,56 +35,12 @@ function Home() {
         locationType={locationType}
         locations={locations}
         setLocations={setLocations}
+        setHighlightMarker={setHighlightMarker}
       />
+      
+      <ToastContainer />
     </div>
   );
 }
 
 export default Home;
-
-
-
-
-
-
-
-
-
-
-
-
-// import React, { useRef, useState } from "react";
-// import Map from "../components/Map";
-// import Functionality from "../components/Functionality";
-
-// import "../css/home.css";
-
-// function Home() {
-//   const handleClick = () => {
-//     console.log("Button clicked!");
-//   };
-
-//   const [mapInstance, setMapInstance] = useState(null);
-//   const [clickFunction, setClickFunction] = useState(() => handleClick);
-//   const [locationType, setLocationType] = useState(true);
-
-//   return (
-//     <div>
-//       {/* <Functionality
-//         mapInstance={mapInstance}
-//         clickFunction={clickFunction}
-//         setLocationType={setLocationType}
-//         locationType={locationType}
-//       /> */}
-//       <Map
-//         setMapInstance={setMapInstance}
-//         setClickFunction={setClickFunction}
-//         locationType={locationType}
-//       />
-
-//       {/* <button onClick={setLocationType(false)} style={{position:"absolute"}}>Click me!</button> */}
-//     </div>
-//   );
-// }
-
-// export default Home;

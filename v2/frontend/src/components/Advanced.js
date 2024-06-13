@@ -26,9 +26,9 @@ function Advanced({importFileLocations, importFileVehicles}) {
       {expanded && (
         <div className="advanceContainer">
           <button className="btn btnWidth" onClick={importFileLocations} accept=".json" >Import locatii</button>
-          <button className="btn btnWidth" accept=".json">Import vehicule</button>
-          <button className="btn btnWidth">Download data</button>
-          <button className="btn btnWidth">Print data</button>
+          <button className="btn btnWidth" onClick={importFileVehicles} accept=".json">Import vehicule</button>
+          {/* <button className="btn btnWidth">Download data</button>
+          <button className="btn btnWidth">Print data</button> */}
         </div>
       )}
 

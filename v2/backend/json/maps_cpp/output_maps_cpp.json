@@ -1,17 +1,36 @@
-{"tours": [
 {
-"vehicle": 1,
-"route": [4, 0, 3, 2, 4]
-},
-{
-"vehicle": 0,
-"route": [4, 1, 5, 4]
-}],
-"population_size": 1000,
-"generation_limit": 20,
-"crossover_prob": 0.840000,
-"mutation_rate": 0.050000,
-"initial_cost": 474.573975,
-"final_cost": 474.573975,
-"time": 11.056007}
-
+    "final_cost": 2.312142466135948e-43,
+    "time": 1.65e-07,
+    "tours": [
+        {
+            "cost": 2.312142466135948e-43,
+            "route": [
+                0,
+                7,
+                6,
+                0
+            ],
+            "vehicle": 2
+        },
+        {
+            "cost": 2.312142466135948e-43,
+            "route": [
+                1,
+                3,
+                5,
+                1
+            ],
+            "vehicle": 1
+        },
+        {
+            "cost": 2.312142466135948e-43,
+            "route": [
+                0,
+                2,
+                4,
+                0
+            ],
+            "vehicle": 0
+        }
+    ]
+}

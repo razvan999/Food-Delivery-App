@@ -1,23 +1,37 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../css/configuration.css";
 
 function Configuration({ setConfiguration }) {
   const [selection, setSelection] = useState("");
   const [crossover, setCrossover] = useState("");
   const [populationSize, setPopulationSize] = useState("");
-  const [generationLimit, setGenerationLimit] = useState(""); 
-  let configuration = {};
+  const [generationLimit, setGenerationLimit] = useState("");
 
   const handleSave = () => {
-    const configuration = {
-      selection: selection.toLowerCase().replace(/ /g, "_"),
-      crossover: crossover.toLowerCase(),
-      population_size: populationSize.toLowerCase(),
-      generation_limit: generationLimit.toLowerCase(),
+    const updatedConfiguration = {
+      selection: "tournament_selection",
+      crossover: "twopointcrossover",
+      population_size: "dynamic",
+      generation_limit: "20",
     };
-    setConfiguration(configuration);
-    console.log("configuration:", configuration);
-  };  
+    if (selection != "") {
+      updatedConfiguration.selection = selection
+        .toLowerCase()
+        .replace(/ /g, "_");
+    }
+    if (crossover != "") {
+      updatedConfiguration.crossover = crossover.toLowerCase();
+    }
+    if (populationSize != "") {
+      updatedConfiguration.population_size = populationSize.toLowerCase();
+    }
+    if (generationLimit != "") {
+      updatedConfiguration.generation_limit = generationLimit.toLowerCase();
+    }
+
+    setConfiguration(updatedConfiguration);
+    console.log("Updated configuration:", updatedConfiguration);
+  };
 
   return (
     <div>
@@ -29,9 +43,9 @@ function Configuration({ setConfiguration }) {
           onChange={(e) => setSelection(e.target.value)}
         >
           <option value="">Selection</option>
-          <option value="Rank Selection">Rank Selection</option>
-          <option value="Tournament Selection">Tournament Selection</option>
-          <option value="Wheel Selection">Wheel Selection</option>
+          <option value="tournament_selection">Tournament Selection</option>
+          <option value="rank_selection">Rank Selection</option>
+          <option value="wheel_selection">Wheel Selection</option>
         </select>
 
         <select
@@ -39,9 +53,9 @@ function Configuration({ setConfiguration }) {
           onChange={(e) => setCrossover(e.target.value)}
         >
           <option value="">Crossover</option>
-          <option value="Onepointcrossover">Onepointcrossover</option>
-          <option value="Twopointcrossover">Twopointcrossover</option>
-          <option value="Cyclecrossover">Cyclecrossover</option>
+          <option value="twopointcrossover">Twopointcrossover</option>
+          <option value="onepointcrossover">Onepointcrossover</option>
+          <option value="cyclecrossover">Cyclecrossover</option>
         </select>
 
         <select
@@ -49,9 +63,9 @@ function Configuration({ setConfiguration }) {
           onChange={(e) => setPopulationSize(e.target.value)}
         >
           <option value="">Population size</option>
-          <option value="Dynamic">Dynamic</option>
-          <option value="Small">Small</option>
-          <option value="Large">Large</option>
+          <option value="dynamic">Dynamic</option>
+          <option value="small">Small</option>
+          <option value="large">Large</option>
         </select>
 
         <select

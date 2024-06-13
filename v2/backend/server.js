@@ -66,6 +66,21 @@ const app = express();
 const port = 3000;
 const httpServer = http.createServer(app);
 
+const cors = require('cors');
+app.use(cors());
+
+// app.use(cors({
+//   origin: 'http://localhost:5000', // Allow requests only from this origin
+//   credentials: true // Allow cookies to be sent along with the request
+// }));
+
+
+
+
+
+
+
+
 app.use("/", ordinaryViewRouter.router);
 app.use("/details", detailedViewRouter.router);
 app.use("/javascript", express.static(path.join(__dirname, "./javascript")));

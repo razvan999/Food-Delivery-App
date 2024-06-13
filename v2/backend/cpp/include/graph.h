@@ -32,6 +32,10 @@ public:
         return this->depots;
     }
 
+    int get_locations_size() {
+        return this->customers.size() + this->depots.size();
+    }
+
     void print() {
         cout << "\nPrinting Graph: " << endl;
         cout << "Customers: " << endl;

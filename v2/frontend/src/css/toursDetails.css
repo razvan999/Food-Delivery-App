@@ -1,0 +1,44 @@
+.toursContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.generaDetails{
+    font-size: medium;
+    color: var(--font-color);
+    margin-left: 10px;
+}
+
+.justAToour {
+    box-shadow: 0px 0px 8px var(--purple);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.det {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.first{
+    font-size: small;
+    color: darkgray ;
+    margin: 5px;
+}
+
+.second{
+    color: --var(--font-color);
+    font-size: medium;
+    margin: 5px;
+}
