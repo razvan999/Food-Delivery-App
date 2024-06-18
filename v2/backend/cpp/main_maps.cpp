@@ -12,6 +12,8 @@ using namespace std;
 
 int main()
 {
+
+    cout << "aaaaastaa" <<endl;
     Graph graph;
     Vehicles vehicles;
     initialize_maps(graph, vehicles);

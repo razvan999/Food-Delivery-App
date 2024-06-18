@@ -17,6 +17,9 @@ float get_random_01() {
 }
 
 int get_random_int(int max, int min = 0) {
+    if (min > max) {
+        swap(min, max);
+    }
 	random_device rd;
 	mt19937 gen(rd());
 	uniform_int_distribution<> dis(min, max);
@@ -116,6 +119,42 @@ Solution generate_solution(Graph graph, Vehicles vehicles) {
 
 	return solution;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Population generate_population(Graph graph, Vehicles vehicles, bool flag = false) {
 	if (flag) {
@@ -336,7 +375,7 @@ void wheel_selection(Population& population) {
 	update_cost(population);
 }
 
-void selection(Population& population, int selection_type) {
+void selection(Population& population, int selection_type = 1) {
 	if (selection_type == 0) {
 		rank_selection(population);
 	}
@@ -670,288 +709,288 @@ parents_for_crossover_indices get_parents(Vehicles vehicles, Population& populat
 
 
 
+//aici e aia bunaaaa
+// void twocut_crossover(Vehicles vehicles, Solution parent1, Solution parent2, Solution &child1, Solution &child2) {
+// 	vector<simplified> smplified_parent1, smplified_parent2, simplified_child1, simplified_child2;
+// 	for (int i = 0; i < parent1.routes.size(); i++) {
+// 		Route route = parent1.routes[i];
 
-void twocut_crossover(Vehicles vehicles, Solution parent1, Solution parent2, Solution &child1, Solution &child2) {
-	vector<simplified> smplified_parent1, smplified_parent2, simplified_child1, simplified_child2;
-	for (int i = 0; i < parent1.routes.size(); i++) {
-		Route route = parent1.routes[i];
+// 		for (int j = 0; j < route.size(); j++) {
+// 			if (route[j].type == Node_type::CUSTOMER) {
+// 				smplified_parent1.push_back({ route[j].id , i, j});
+// 				simplified_child1.push_back({ -1, i, j });
+// 			}
+// 		}
+// 	}
 
-		for (int j = 0; j < route.size(); j++) {
-			if (route[j].type == Node_type::CUSTOMER) {
-				smplified_parent1.push_back({ route[j].id , i, j});
-				simplified_child1.push_back({ -1, i, j });
-			}
-		}
-	}
+// 	for (int i = 0; i < parent2.routes.size(); i++) {
+// 		Route route = parent2.routes[i];
 
-	for (int i = 0; i < parent2.routes.size(); i++) {
-		Route route = parent2.routes[i];
+// 		for (int j = 0; j < route.size(); j++) {
+// 			if (route[j].type == Node_type::CUSTOMER) {
+// 				smplified_parent2.push_back({ route[j].id , i, j });
+// 				simplified_child2.push_back({ -1, i, j });
+// 			}
+// 		}
+// 	}
 
-		for (int j = 0; j < route.size(); j++) {
-			if (route[j].type == Node_type::CUSTOMER) {
-				smplified_parent2.push_back({ route[j].id , i, j });
-				simplified_child2.push_back({ -1, i, j });
-			}
-		}
-	}
+// 	int cut_point1 = get_random_int(smplified_parent1.size() - 3, 1);
+// 	int cut_point2 = get_random_int(smplified_parent1.size() - 2, cut_point1 + 1);
 
-	int cut_point1 = get_random_int(smplified_parent1.size() - 3, 1);
-	int cut_point2 = get_random_int(smplified_parent1.size() - 2, cut_point1 + 1);
+// 	//cut_point1 = 5;
+// 	//cut_point2 = 8;
 
-	//cut_point1 = 5;
-	//cut_point2 = 8;
+// 	//cout << endl;
+// 	//cout << "towcut crossover" << endl;
+// 	//print_simplified_child(smplified_parent1, cut_point1, cut_point2);
+// 	//cout << endl;
+// 	//print_simplified_child(smplified_parent2, cut_point1, cut_point2);
+// 	//cout << endl;
+// 	//cout << "Cut points: " << cut_point1 << " " << cut_point2 << endl;
 
-	//cout << endl;
-	//cout << "towcut crossover" << endl;
-	//print_simplified_child(smplified_parent1, cut_point1, cut_point2);
-	//cout << endl;
-	//print_simplified_child(smplified_parent2, cut_point1, cut_point2);
-	//cout << endl;
-	//cout << "Cut points: " << cut_point1 << " " << cut_point2 << endl;
+// 	int size = smplified_parent1.size();
+// 	vector<Switch> switches;
+// 	for (int i = cut_point1; i < cut_point2; i ++) {
+// 		simplified_child1[i] = smplified_parent1[i];
+// 		simplified_child2[i] = smplified_parent2[i];
 
-	int size = smplified_parent1.size();
-	vector<Switch> switches;
-	for (int i = cut_point1; i < cut_point2; i ++) {
-		simplified_child1[i] = smplified_parent1[i];
-		simplified_child2[i] = smplified_parent2[i];
+// 		if (smplified_parent1[i].id != smplified_parent2[i].id) {
+// 			if (cycle_in_switches(switches, { smplified_parent1[i], smplified_parent2[i] }) == false) {
+// 				switches.push_back({ smplified_parent1[i], smplified_parent2[i] });
+// 			}
+// 		}
+// 	}
 
-		if (smplified_parent1[i].id != smplified_parent2[i].id) {
-			if (cycle_in_switches(switches, { smplified_parent1[i], smplified_parent2[i] }) == false) {
-				switches.push_back({ smplified_parent1[i], smplified_parent2[i] });
-			}
-		}
-	}
+// 	// adaug ce pot din partile 1 si 3 astfel incat sa nu am duplicate
+// 	for (int i = 0; i < cut_point1; i ++) {
+// 		if (exists_in_vector(simplified_child1, smplified_parent2[i].id) == false) {
+// 			simplified_child1[i] = smplified_parent2[i];
+// 		}
 
-	// adaug ce pot din partile 1 si 3 astfel incat sa nu am duplicate
-	for (int i = 0; i < cut_point1; i ++) {
-		if (exists_in_vector(simplified_child1, smplified_parent2[i].id) == false) {
-			simplified_child1[i] = smplified_parent2[i];
-		}
+// 		if (exists_in_vector(simplified_child2, smplified_parent1[i].id) == false) {
+// 			simplified_child2[i] = smplified_parent1[i];
+// 		}
+// 	}
 
-		if (exists_in_vector(simplified_child2, smplified_parent1[i].id) == false) {
-			simplified_child2[i] = smplified_parent1[i];
-		}
-	}
+// 	for (int i = cut_point2; i < size; i++) {
+// 		if (exists_in_vector(simplified_child1, smplified_parent2[i].id) == false) {
+// 			simplified_child1[i] = smplified_parent2[i];
+// 		}
 
-	for (int i = cut_point2; i < size; i++) {
-		if (exists_in_vector(simplified_child1, smplified_parent2[i].id) == false) {
-			simplified_child1[i] = smplified_parent2[i];
-		}
+// 		if (exists_in_vector(simplified_child2, smplified_parent1[i].id) == false) {
+// 			simplified_child2[i] = smplified_parent1[i];
+// 		}
+// 	}
 
-		if (exists_in_vector(simplified_child2, smplified_parent1[i].id) == false) {
-			simplified_child2[i] = smplified_parent1[i];
-		}
-	}
+// 	for (int i = 0; i < cut_point1; i++) {
+// 		if (simplified_child1[i].id == -1) {
+// 			simplified parent_value = smplified_parent2[i];
+// 			vector<Switch> prev_values;
+// 			do {
+// 				int index_switch = poz_in_switch(switches, parent_value, prev_values);
+// 				if (index_switch == -1) {
+// 					cout << "index_switch == -1" << endl;
+// 					exit(111);
+// 				}
 
-	for (int i = 0; i < cut_point1; i++) {
-		if (simplified_child1[i].id == -1) {
-			simplified parent_value = smplified_parent2[i];
-			vector<Switch> prev_values;
-			do {
-				int index_switch = poz_in_switch(switches, parent_value, prev_values);
-				if (index_switch == -1) {
-					cout << "index_switch == -1" << endl;
-					exit(111);
-				}
+// 				simplified new_val = switches[index_switch].s1;
+// 				prev_values.push_back(switches[index_switch]);
+// 				if (new_val.id == parent_value.id) {
+// 					new_val = switches[index_switch].s2;
+// 				}
 
-				simplified new_val = switches[index_switch].s1;
-				prev_values.push_back(switches[index_switch]);
-				if (new_val.id == parent_value.id) {
-					new_val = switches[index_switch].s2;
-				}
-
-				if (check_switch(simplified_child1, new_val)) {
-					simplified_child1[i] = new_val;
-					break;
-				}
+// 				if (check_switch(simplified_child1, new_val)) {
+// 					simplified_child1[i] = new_val;
+// 					break;
+// 				}
 				
-				parent_value = new_val;
-			} while (true);
-		}
+// 				parent_value = new_val;
+// 			} while (true);
+// 		}
 
-		if (simplified_child2[i].id == -1) {
-			simplified parent_value = smplified_parent1[i];
-			vector<Switch> prev_values;
-			do {
-				int index_switch = poz_in_switch(switches, parent_value, prev_values);
-				if (index_switch == -1) {
-					cout << "index_switch == -1" << endl;
-					exit(111);
-				}
+// 		if (simplified_child2[i].id == -1) {
+// 			simplified parent_value = smplified_parent1[i];
+// 			vector<Switch> prev_values;
+// 			do {
+// 				int index_switch = poz_in_switch(switches, parent_value, prev_values);
+// 				if (index_switch == -1) {
+// 					cout << "index_switch == -1" << endl;
+// 					exit(111);
+// 				}
 
-				simplified new_val = switches[index_switch].s1;
-				prev_values.push_back(switches[index_switch]);
-				if (new_val.id == parent_value.id) {
-					new_val = switches[index_switch].s2;
-				}
+// 				simplified new_val = switches[index_switch].s1;
+// 				prev_values.push_back(switches[index_switch]);
+// 				if (new_val.id == parent_value.id) {
+// 					new_val = switches[index_switch].s2;
+// 				}
 
-				if (check_switch(simplified_child2, new_val)) {
-					simplified_child2[i] = new_val;
-					break;
-				}
+// 				if (check_switch(simplified_child2, new_val)) {
+// 					simplified_child2[i] = new_val;
+// 					break;
+// 				}
 
-				parent_value = new_val;
-			} while (true);
-		}
-	}
+// 				parent_value = new_val;
+// 			} while (true);
+// 		}
+// 	}
 	
-	for (int i = cut_point2; i < size; i++) {
-		if (simplified_child1[i].id == -1) {
-			simplified parent_value = smplified_parent2[i];
-			vector<Switch> prev_values;
-			do {
-				int index_switch = poz_in_switch(switches, parent_value, prev_values);
-				if (index_switch == -1) {
-					cout << "index_switch == -1" << endl;
-					exit(111);
-				}
+// 	for (int i = cut_point2; i < size; i++) {
+// 		if (simplified_child1[i].id == -1) {
+// 			simplified parent_value = smplified_parent2[i];
+// 			vector<Switch> prev_values;
+// 			do {
+// 				int index_switch = poz_in_switch(switches, parent_value, prev_values);
+// 				if (index_switch == -1) {
+// 					cout << "index_switch == -1" << endl;
+// 					exit(111);
+// 				}
 
-				simplified new_val = switches[index_switch].s1;
-				prev_values.push_back(switches[index_switch]);
-				if (new_val.id == parent_value.id) {
-					new_val = switches[index_switch].s2;
-				}
+// 				simplified new_val = switches[index_switch].s1;
+// 				prev_values.push_back(switches[index_switch]);
+// 				if (new_val.id == parent_value.id) {
+// 					new_val = switches[index_switch].s2;
+// 				}
 
-				if (check_switch(simplified_child1, new_val)) {
-					simplified_child1[i] = new_val;
-					break;
-				}
+// 				if (check_switch(simplified_child1, new_val)) {
+// 					simplified_child1[i] = new_val;
+// 					break;
+// 				}
 
-				parent_value = new_val;
-			} while (true);
-		}
+// 				parent_value = new_val;
+// 			} while (true);
+// 		}
 
-		if (simplified_child2[i].id == -1) {
-			simplified parent_value = smplified_parent1[i];
-			vector<Switch> prev_values;
-			do {
-				int index_switch = poz_in_switch(switches, parent_value, prev_values);
-				if (index_switch == -1) {
-					cout << "index_switch == -1" << endl;
-					exit(111);
-				}
+// 		if (simplified_child2[i].id == -1) {
+// 			simplified parent_value = smplified_parent1[i];
+// 			vector<Switch> prev_values;
+// 			do {
+// 				int index_switch = poz_in_switch(switches, parent_value, prev_values);
+// 				if (index_switch == -1) {
+// 					cout << "index_switch == -1" << endl;
+// 					exit(111);
+// 				}
 
-				simplified new_val = switches[index_switch].s1;
-				prev_values.push_back(switches[index_switch]);
-				if (new_val.id == parent_value.id) {
-					new_val = switches[index_switch].s2;
-				}
+// 				simplified new_val = switches[index_switch].s1;
+// 				prev_values.push_back(switches[index_switch]);
+// 				if (new_val.id == parent_value.id) {
+// 					new_val = switches[index_switch].s2;
+// 				}
 
-				if (check_switch(simplified_child2, new_val)) {
-					simplified_child2[i] = new_val;
-					break;
-				}
+// 				if (check_switch(simplified_child2, new_val)) {
+// 					simplified_child2[i] = new_val;
+// 					break;
+// 				}
 
-				parent_value = new_val;
-			} while (true);
-		}
-	}
+// 				parent_value = new_val;
+// 			} while (true);
+// 		}
+// 	}
 
-	Route route1, route2;
-	for (int i = 0; i < cut_point1; i++) {
-		route1.push_back(parent2.routes[simplified_child1[i].i][simplified_child1[i].j]);
-		route2.push_back(parent1.routes[simplified_child2[i].i][simplified_child2[i].j]);
-	}
+// 	Route route1, route2;
+// 	for (int i = 0; i < cut_point1; i++) {
+// 		route1.push_back(parent2.routes[simplified_child1[i].i][simplified_child1[i].j]);
+// 		route2.push_back(parent1.routes[simplified_child2[i].i][simplified_child2[i].j]);
+// 	}
 
-	for (int i = cut_point1; i < cut_point2; i++) {
-		route1.push_back(parent1.routes[simplified_child1[i].i][simplified_child1[i].j]);
-		route2.push_back(parent2.routes[simplified_child2[i].i][simplified_child2[i].j]);
-	}
+// 	for (int i = cut_point1; i < cut_point2; i++) {
+// 		route1.push_back(parent1.routes[simplified_child1[i].i][simplified_child1[i].j]);
+// 		route2.push_back(parent2.routes[simplified_child2[i].i][simplified_child2[i].j]);
+// 	}
 
-	for (int i = cut_point2; i < size; i++) {
-		route1.push_back(parent2.routes[simplified_child1[i].i][simplified_child1[i].j]);
-		route2.push_back(parent1.routes[simplified_child2[i].i][simplified_child2[i].j]);
-	}
+// 	for (int i = cut_point2; i < size; i++) {
+// 		route1.push_back(parent2.routes[simplified_child1[i].i][simplified_child1[i].j]);
+// 		route2.push_back(parent1.routes[simplified_child2[i].i][simplified_child2[i].j]);
+// 	}
 
-	//acum, trebuie atribuite vehiculelor
-	int route1_index = 0, veh_counter = 0;
-	while (route1_index < route1.size() && veh_counter < parent1.vehicles_indexes.size()) {
-		int vehicle_index = parent1.vehicles_indexes[veh_counter];
+// 	//acum, trebuie atribuite vehiculelor
+// 	int route1_index = 0, veh_counter = 0;
+// 	while (route1_index < route1.size() && veh_counter < parent1.vehicles_indexes.size()) {
+// 		int vehicle_index = parent1.vehicles_indexes[veh_counter];
 
-		Route route;
-		route.push_back(vehicles[vehicle_index].get_depot());
-		float capacity = 0.0, max_capacity = vehicles[vehicle_index].get_capacity();
-		while (route1_index < route1.size() && capacity + route1[route1_index].order_weight <= max_capacity) {
-			capacity += route1[route1_index].order_weight;
-			route.push_back(route1[route1_index]);
+// 		Route route;
+// 		route.push_back(vehicles[vehicle_index].get_depot());
+// 		float capacity = 0.0, max_capacity = vehicles[vehicle_index].get_capacity();
+// 		while (route1_index < route1.size() && capacity + route1[route1_index].order_weight <= max_capacity) {
+// 			capacity += route1[route1_index].order_weight;
+// 			route.push_back(route1[route1_index]);
 
-			route1_index++;
-		}
+// 			route1_index++;
+// 		}
 
-		route.push_back(vehicles[vehicle_index].get_depot());
-		child1.routes.push_back(route);
-		child1.vehicles_indexes.push_back(vehicle_index);
-		veh_counter++;
-	}
+// 		route.push_back(vehicles[vehicle_index].get_depot());
+// 		child1.routes.push_back(route);
+// 		child1.vehicles_indexes.push_back(vehicle_index);
+// 		veh_counter++;
+// 	}
 
-	if (route1_index < route1.size()) {
-		//mai am nevoie de vehicule
-		while (route1_index < route1.size()) {
-			int index_lucky_vehicle = get_random_int(vehicles.size() - 1);
-			Route route;
-			route.push_back(vehicles[index_lucky_vehicle].get_depot());
-			float capacity = 0.0, max_capacity = vehicles[index_lucky_vehicle].get_capacity();
-			while (route1_index < route1.size() && capacity + route1[route1_index].order_weight <= max_capacity) {
-				capacity += route1[route1_index].order_weight;
-				route.push_back(route1[route1_index]);
-				route1_index++;
-			}
+// 	if (route1_index < route1.size()) {
+// 		//mai am nevoie de vehicule
+// 		while (route1_index < route1.size()) {
+// 			int index_lucky_vehicle = get_random_int(vehicles.size() - 1);
+// 			Route route;
+// 			route.push_back(vehicles[index_lucky_vehicle].get_depot());
+// 			float capacity = 0.0, max_capacity = vehicles[index_lucky_vehicle].get_capacity();
+// 			while (route1_index < route1.size() && capacity + route1[route1_index].order_weight <= max_capacity) {
+// 				capacity += route1[route1_index].order_weight;
+// 				route.push_back(route1[route1_index]);
+// 				route1_index++;
+// 			}
 
-			route.push_back(vehicles[index_lucky_vehicle].get_depot());
-			child1.routes.push_back(route);
-			child1.vehicles_indexes.push_back(index_lucky_vehicle);
-		}
-	}
+// 			route.push_back(vehicles[index_lucky_vehicle].get_depot());
+// 			child1.routes.push_back(route);
+// 			child1.vehicles_indexes.push_back(index_lucky_vehicle);
+// 		}
+// 	}
 
-	int route2_index = 0;
-	veh_counter = 0;
-	while (route2_index < route2.size() && veh_counter < parent2.vehicles_indexes.size()) {
-		int vehicle_index = parent2.vehicles_indexes[veh_counter];
+// 	int route2_index = 0;
+// 	veh_counter = 0;
+// 	while (route2_index < route2.size() && veh_counter < parent2.vehicles_indexes.size()) {
+// 		int vehicle_index = parent2.vehicles_indexes[veh_counter];
 
-		Route route;
-		route.push_back(vehicles[vehicle_index].get_depot());
-		float capacity = 0.0, max_capacity = vehicles[vehicle_index].get_capacity();
-		while (route2_index < route2.size() && capacity + route2[route2_index].order_weight <= max_capacity) {
-			capacity += route2[route2_index].order_weight;
-			route.push_back(route2[route2_index]);
+// 		Route route;
+// 		route.push_back(vehicles[vehicle_index].get_depot());
+// 		float capacity = 0.0, max_capacity = vehicles[vehicle_index].get_capacity();
+// 		while (route2_index < route2.size() && capacity + route2[route2_index].order_weight <= max_capacity) {
+// 			capacity += route2[route2_index].order_weight;
+// 			route.push_back(route2[route2_index]);
 
-			route2_index++;
-		}
+// 			route2_index++;
+// 		}
 
-		route.push_back(vehicles[vehicle_index].get_depot());
-		child2.routes.push_back(route);
-		child2.vehicles_indexes.push_back(vehicle_index);
-		veh_counter++;
-	}
+// 		route.push_back(vehicles[vehicle_index].get_depot());
+// 		child2.routes.push_back(route);
+// 		child2.vehicles_indexes.push_back(vehicle_index);
+// 		veh_counter++;
+// 	}
 
-	if (route2_index < route2.size()) {
-		//mai am nevoie de vehicule
-		while (route2_index < route2.size()) {
-			int index_lucky_vehicle = get_random_int(vehicles.size() - 1);
-			Route route;
-			route.push_back(vehicles[index_lucky_vehicle].get_depot());
-			float capacity = 0.0, max_capacity = vehicles[index_lucky_vehicle].get_capacity();
-			while (route2_index < route2.size() && capacity + route[route2_index].order_weight <= max_capacity) {
-				capacity += route2[route2_index].order_weight;
-				route.push_back(route2[route2_index]);
-				route2_index++;
-			}
+// 	if (route2_index < route2.size()) {
+// 		//mai am nevoie de vehicule
+// 		while (route2_index < route2.size()) {
+// 			int index_lucky_vehicle = get_random_int(vehicles.size() - 1);
+// 			Route route;
+// 			route.push_back(vehicles[index_lucky_vehicle].get_depot());
+// 			float capacity = 0.0, max_capacity = vehicles[index_lucky_vehicle].get_capacity();
+// 			while (route2_index < route2.size() && capacity + route[route2_index].order_weight <= max_capacity) {
+// 				capacity += route2[route2_index].order_weight;
+// 				route.push_back(route2[route2_index]);
+// 				route2_index++;
+// 			}
 
-			route.push_back(vehicles[index_lucky_vehicle].get_depot());
-			child2.routes.push_back(route);
-			child2.vehicles_indexes.push_back(index_lucky_vehicle);
-		}
-	}
+// 			route.push_back(vehicles[index_lucky_vehicle].get_depot());
+// 			child2.routes.push_back(route);
+// 			child2.vehicles_indexes.push_back(index_lucky_vehicle);
+// 		}
+// 	}
 
-	//cout << "moooooooooooooooooor" << endl;
-	//for (int i = 0; i < route1.size(); i++) {
-	//	cout << route1[i].id << " ";
-	//}
-	//cout << endl;
-	//for (int i = 0; i < route2.size(); i++) {
-	//	cout << route2[i].id << " ";
-	//}
-}
+// 	//cout << "moooooooooooooooooor" << endl;
+// 	//for (int i = 0; i < route1.size(); i++) {
+// 	//	cout << route1[i].id << " ";
+// 	//}
+// 	//cout << endl;
+// 	//for (int i = 0; i < route2.size(); i++) {
+// 	//	cout << route2[i].id << " ";
+// 	//}
+// }
 
 void onecut_crossover(Vehicles vehicles, Solution parent1, Solution parent2, Solution &child1, Solution &child2) {
     vector<simplified> smplified_parent1, smplified_parent2, simplified_child1, simplified_child2;
@@ -1088,9 +1127,286 @@ void onecut_crossover(Vehicles vehicles, Solution parent1, Solution parent2, Sol
     }
 }
 
-void cyclecrossover(Vehicles vehicles, Solution parent1, Solution parent2, Solution &child1, Solution &child2) {}
 
-void crossover(Vehicles vehicles, Population& population, int crossover_type) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void twocut_crossover(Vehicles vehicles, Solution parent1, Solution parent2, Solution &child1, Solution &child2) {
+	vector<simplified> smplified_parent1, smplified_parent2, simplified_child1, simplified_child2;
+	for (int i = 0; i < parent1.routes.size(); i++) {
+		Route route = parent1.routes[i];
+
+		for (int j = 0; j < route.size(); j++) {
+			if (route[j].type == Node_type::CUSTOMER) {
+				smplified_parent1.push_back({ route[j].id , i, j});
+				simplified_child1.push_back({ -1, i, j });
+			}
+		}
+	}
+
+	for (int i = 0; i < parent2.routes.size(); i++) {
+		Route route = parent2.routes[i];
+
+		for (int j = 0; j < route.size(); j++) {
+			if (route[j].type == Node_type::CUSTOMER) {
+				smplified_parent2.push_back({ route[j].id , i, j });
+				simplified_child2.push_back({ -1, i, j });
+			}
+		}
+	}
+
+	// cout<<"aici"<<endl;
+	int cut_point1 = get_random_int(smplified_parent1.size() - 3, 1);
+	int cut_point2 = get_random_int(smplified_parent1.size() - 2, cut_point1 + 1);
+
+	int size = smplified_parent1.size();
+	vector<Switch> switches;
+	for (int i = cut_point1; i < cut_point2; i ++) {
+		simplified_child1[i] = smplified_parent1[i];
+		simplified_child2[i] = smplified_parent2[i];
+
+		if (smplified_parent1[i].id != smplified_parent2[i].id) {
+			if (cycle_in_switches(switches, { smplified_parent1[i], smplified_parent2[i] }) == false) {
+				switches.push_back({ smplified_parent1[i], smplified_parent2[i] });
+			}
+		}
+	}
+
+	for (int i = 0; i < cut_point1; i ++) {
+		if (exists_in_vector(simplified_child1, smplified_parent2[i].id) == false) {
+			simplified_child1[i] = smplified_parent2[i];
+		}
+
+		if (exists_in_vector(simplified_child2, smplified_parent1[i].id) == false) {
+			simplified_child2[i] = smplified_parent1[i];
+		}
+	}
+
+	for (int i = cut_point2; i < size; i++) {
+		if (exists_in_vector(simplified_child1, smplified_parent2[i].id) == false) {
+			simplified_child1[i] = smplified_parent2[i];
+		}
+
+		if (exists_in_vector(simplified_child2, smplified_parent1[i].id) == false) {
+			simplified_child2[i] = smplified_parent1[i];
+		}
+	}
+
+	for (int i = 0; i < cut_point1; i++) {
+		if (simplified_child1[i].id == -1) {
+			simplified parent_value = smplified_parent2[i];
+			vector<Switch> prev_values;
+			do {
+				int index_switch = poz_in_switch(switches, parent_value, prev_values);
+				if (index_switch == -1) {
+					cout << "1 index_switch == -1" << endl;
+					exit(111);
+				}
+
+				simplified new_val = switches[index_switch].s1;
+				prev_values.push_back(switches[index_switch]);
+				if (new_val.id == parent_value.id) {
+					new_val = switches[index_switch].s2;
+				}
+
+				if (check_switch(simplified_child1, new_val)) {
+					simplified_child1[i] = new_val;
+					break;
+				}
+				
+				parent_value = new_val;
+			} while (true);
+		}
+
+		if (simplified_child2[i].id == -1) {
+			simplified parent_value = smplified_parent1[i];
+			vector<Switch> prev_values;
+			do {
+				int index_switch = poz_in_switch(switches, parent_value, prev_values);
+				if (index_switch == -1) {
+					cout << "2 index_switch == -1" << endl;
+					exit(111);
+				}
+
+				simplified new_val = switches[index_switch].s1;
+				prev_values.push_back(switches[index_switch]);
+				if (new_val.id == parent_value.id) {
+					new_val = switches[index_switch].s2;
+				}
+
+				if (check_switch(simplified_child2, new_val)) {
+					simplified_child2[i] = new_val;
+					break;
+				}
+
+				parent_value = new_val;
+			} while (true);
+		}
+	}
+	
+	for (int i = cut_point2; i < size; i++) {
+		if (simplified_child1[i].id == -1) {
+			simplified parent_value = smplified_parent2[i];
+			vector<Switch> prev_values;
+			do {
+				int index_switch = poz_in_switch(switches, parent_value, prev_values);
+				if (index_switch == -1) {
+					cout << "3 index_switch == -1" << endl;
+					exit(111);
+				}
+
+				simplified new_val = switches[index_switch].s1;
+				prev_values.push_back(switches[index_switch]);
+				if (new_val.id == parent_value.id) {
+					new_val = switches[index_switch].s2;
+				}
+
+				if (check_switch(simplified_child1, new_val)) {
+					simplified_child1[i] = new_val;
+					break;
+				}
+
+				parent_value = new_val;
+			} while (true);
+		}
+
+		if (simplified_child2[i].id == -1) {
+			simplified parent_value = smplified_parent1[i];
+			vector<Switch> prev_values;
+			do {
+				int index_switch = poz_in_switch(switches, parent_value, prev_values);
+				if (index_switch == -1) {
+					cout << "4 index_switch == -1" << endl;
+					exit(111);
+				}
+
+				simplified new_val = switches[index_switch].s1;
+				prev_values.push_back(switches[index_switch]);
+				if (new_val.id == parent_value.id) {
+					new_val = switches[index_switch].s2;
+				}
+
+				if (check_switch(simplified_child2, new_val)) {
+					simplified_child2[i] = new_val;
+					break;
+				}
+
+				parent_value = new_val;
+			} while (true);
+		}
+	}
+
+	Route route1, route2;
+	for (int i = 0; i < cut_point1; i++) {
+		route1.push_back(parent2.routes[simplified_child1[i].i][simplified_child1[i].j]);
+		route2.push_back(parent1.routes[simplified_child2[i].i][simplified_child2[i].j]);
+	}
+
+	for (int i = cut_point1; i < cut_point2; i++) {
+		route1.push_back(parent1.routes[simplified_child1[i].i][simplified_child1[i].j]);
+		route2.push_back(parent2.routes[simplified_child2[i].i][simplified_child2[i].j]);
+	}
+
+	for (int i = cut_point2; i < size; i++) {
+		route1.push_back(parent2.routes[simplified_child1[i].i][simplified_child1[i].j]);
+		route2.push_back(parent1.routes[simplified_child2[i].i][simplified_child2[i].j]);
+	}
+
+	//acum, trebuie atribuite vehiculelor
+	int route1_index = 0, veh_counter = 0;
+	while (route1_index < route1.size() && veh_counter < parent1.vehicles_indexes.size()) {
+		int vehicle_index = parent1.vehicles_indexes[veh_counter];
+
+		Route route;
+		route.push_back(vehicles[vehicle_index].get_depot());
+		float capacity = 0.0, max_capacity = vehicles[vehicle_index].get_capacity();
+		while (route1_index < route1.size() && capacity + route1[route1_index].order_weight <= max_capacity) {
+			capacity += route1[route1_index].order_weight;
+			route.push_back(route1[route1_index]);
+
+			route1_index++;
+		}
+
+		route.push_back(vehicles[vehicle_index].get_depot());
+		child1.routes.push_back(route);
+		child1.vehicles_indexes.push_back(vehicle_index);
+		veh_counter++;
+	}
+
+	if (route1_index < route1.size()) {
+		//mai am nevoie de vehicule
+		while (route1_index < route1.size()) {
+			int index_lucky_vehicle = get_random_int(vehicles.size() - 1);
+			Route route;
+			route.push_back(vehicles[index_lucky_vehicle].get_depot());
+			float capacity = 0.0, max_capacity = vehicles[index_lucky_vehicle].get_capacity();
+			while (route1_index < route1.size() && capacity + route1[route1_index].order_weight <= max_capacity) {
+				capacity += route1[route1_index].order_weight;
+				route.push_back(route1[route1_index]);
+				route1_index++;
+			}
+
+			route.push_back(vehicles[index_lucky_vehicle].get_depot());
+			child1.routes.push_back(route);
+			child1.vehicles_indexes.push_back(index_lucky_vehicle);
+		}
+	}
+
+	int route2_index = 0;
+	veh_counter = 0;
+	while (route2_index < route2.size() && veh_counter < parent2.vehicles_indexes.size()) {
+		int vehicle_index = parent2.vehicles_indexes[veh_counter];
+
+		Route route;
+		route.push_back(vehicles[vehicle_index].get_depot());
+		float capacity = 0.0, max_capacity = vehicles[vehicle_index].get_capacity();
+		while (route2_index < route2.size() && capacity + route2[route2_index].order_weight <= max_capacity) {
+			capacity += route2[route2_index].order_weight;
+			route.push_back(route2[route2_index]);
+
+			route2_index++;
+		}
+
+		route.push_back(vehicles[vehicle_index].get_depot());
+		child2.routes.push_back(route);
+		child2.vehicles_indexes.push_back(vehicle_index);
+		veh_counter++;
+	}
+
+	if (route2_index < route2.size()) {
+		//mai am nevoie de vehicule
+		while (route2_index < route2.size()) {
+			int index_lucky_vehicle = get_random_int(vehicles.size() - 1);
+			Route route;
+			route.push_back(vehicles[index_lucky_vehicle].get_depot());
+			float capacity = 0.0, max_capacity = vehicles[index_lucky_vehicle].get_capacity();
+			while (route2_index < route2.size() && capacity + route[route2_index].order_weight <= max_capacity) {
+				capacity += route2[route2_index].order_weight;
+				route.push_back(route2[route2_index]);
+				route2_index++;
+			}
+
+			route.push_back(vehicles[index_lucky_vehicle].get_depot());
+			child2.routes.push_back(route);
+			child2.vehicles_indexes.push_back(index_lucky_vehicle);
+		}
+	}
+}
+
+void crossover(Vehicles vehicles, Population& population, int crossover_type = 1) {
 	Population new_population;
 	new_population.solutions.reserve(population.solutions.size());
 	vector<float> probabilities = calculateNormalizedProbabilities(population);
@@ -1108,16 +1424,17 @@ void crossover(Vehicles vehicles, Population& population, int crossover_type) {
 
 		Solution child1, child2;
 		if (crossover_type == 0) {
+			cout << "onecut_crossover" << endl;
 			onecut_crossover(vehicles, population.solutions[parents_indices.parent1], population.solutions[parents_indices.parent2], child1, child2);
 		}
-
 		if (crossover_type == 1) {
 			twocut_crossover(vehicles, population.solutions[parents_indices.parent1], population.solutions[parents_indices.parent2], child1, child2);
 		}
 
-		if (crossover_type == 2) {
-			cyclecrossover(vehicles, population.solutions[parents_indices.parent1], population.solutions[parents_indices.parent2], child1, child2);
-		}
+
+
+
+		twocut_crossover(vehicles, population.solutions[parents_indices.parent1], population.solutions[parents_indices.parent2], child1, child2);
 
 		new_population.solutions.push_back(child1);
 		new_population.solutions.push_back(child2);
@@ -1126,6 +1443,8 @@ void crossover(Vehicles vehicles, Population& population, int crossover_type) {
 	population = new_population;
 	update_cost(population);
 }
+
+
 
 
 

@@ -81,6 +81,10 @@ app.use(cors());
 
 
 
+
+
+
+
 app.use("/", ordinaryViewRouter.router);
 app.use("/details", detailedViewRouter.router);
 app.use("/javascript", express.static(path.join(__dirname, "./javascript")));

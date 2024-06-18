@@ -184,42 +184,44 @@ bool readJsonFile(const char *filePath, Graph &graph, Vehicles &vehicles, Config
 void initialize_maps(Graph &graph, Vehicles &vehicles, Configuration &configuration)
 {
   maps_flag = true;
-  const char *filePath = "./json/maps_cpp/input_maps_cpp.json"; // browser
-  // const char *filePath = "../json/maps_cpp/input_maps_cpp.json"; // terminal
+  // const char *filePath = "./json/maps_cpp/input_maps_cpp.json"; // browser
+  const char *filePath = "../json/maps_cpp/input_maps_cpp.json"; // terminal
   if (!readJsonFile(filePath, graph, vehicles, configuration))
   {
     return;
   }
 }
-void write_json_output_maps(const Solution &best_solution, chrono::duration<double> elapsed_seconds)
+
+void write_json_output_maps(const Solution &best_solution, std::chrono::duration<double> elapsed_seconds)
 {
-  auto time = elapsed_seconds.count();
+    auto time = elapsed_seconds.count();
 
-  ofstream outfile("./json/maps_cpp/output_maps_cpp.json"); // For browser
-  // ofstream outfile("../json/maps_cpp/output_maps_cpp.json"); // For terminal testing
-  if (!outfile)
-  {
-    cerr << "Error: Unable to create file" << endl;
-    return;
-  }
-
-  json output;
-  output["tours"] = json::array();
-  for (int i = 0; i < best_solution.routes.size(); i++)
-  {
-    json tour;
-    tour["vehicle"] = best_solution.vehicles_indexes[i];
-    tour["route"] = json::array();
-    for (const auto &node : best_solution.routes[i])
+    // std::ofstream outfile("./json/maps_cpp/output_maps_cpp.json"); // Pentru browser
+    std::ofstream outfile("../json/maps_cpp/output_maps_cpp.json"); // Pentru testare în terminal
+    if (!outfile.is_open())
     {
-      tour["route"].push_back(node.id);
+        std::cerr << "Error: Unable to create file" << std::endl;
+        return;
     }
-    tour["cost"] = best_solution.cost;
-    output["tours"].push_back(tour);
-  }
-  output["final_cost"] = best_solution.cost;
-  output["time"] = time;
 
-  outfile << output.dump(4) << endl;
-  outfile.close();
+    json output;
+    output["tours"] = json::array();
+    for (int i = 0; i < best_solution.routes.size(); i++)
+    {
+        json tour;
+        tour["vehicle"] = best_solution.vehicles_indexes[i];
+        tour["route"] = json::array();
+        for (const auto &node : best_solution.routes[i])
+        {
+            tour["route"].push_back(node.id);
+        }
+        // tour["cost"] = best_solution.cost;
+        tour["cost"] = static_cast<int>(calculare_cost_ruta(best_solution.routes[i]));
+        output["tours"].push_back(tour);
+    }
+    output["final_cost"] = static_cast<int>(best_solution.cost);
+    output["time"] = time;
+
+    outfile << std::setw(4) << output << std::endl;
+    outfile.close();
 }

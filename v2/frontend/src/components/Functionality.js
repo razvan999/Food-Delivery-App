@@ -518,9 +518,6 @@ export default Functionality;
 
 
 
-
-
-
 // import React, { useRef, useEffect, useState } from "react";
 // import AddVehicles from "./AddVehicles";
 // import Advanced from "./Advanced";

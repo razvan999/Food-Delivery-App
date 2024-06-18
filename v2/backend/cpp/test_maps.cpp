@@ -17,103 +17,71 @@ int main()
     Configuration configuration;
     initialize_maps(graph, vehicles, configuration);
 
-    // graph.print();
-    // print_vehicles(vehicles);
-    // configuration.print();
+    graph.print();
+    print_vehicles(vehicles);
+    configuration.print();
 
     updateConfiguration(configuration, population_size, generation_limit, graph.get_locations_size(), vehicles.size());
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // cout << "population_size: " << population_size << endl;
-    // cout << "generation_limit: " << generation_limit << endl;
-
     chrono::time_point<chrono::system_clock> start, end;
     start = chrono::system_clock::now();
-    // cout << "------Start------" << endl
-    //      << endl;
+    cout << "------Start------" << endl;
 
-    // Population population;
-    // population.solutions.reserve(population_size);
-    // population = generate_population(graph, vehicles, true);
-    // Population best_solutions;
-    // best_solutions.solutions.reserve(population_size);
+    Population population;
+    population.solutions.reserve(population_size);
+    population = generate_population(graph, vehicles, true);
+    Population best_solutions;
+    best_solutions.solutions.reserve(population_size);
 
-    // update_cost(population);
-    // Solution best_initial_solution = get_best_sol_from_current_pop(population);
-    // cout << "Initial best solution: " << best_initial_solution.cost << endl;
-    // cout << endl
-    //      << endl;
+    // print_population(population);
+    update_cost(population);
+    Solution best_initial_solution = get_best_sol_from_current_pop(population);
+    cout << "Initial best solution: " << best_initial_solution.cost << endl;
 
-    // // print_population(population);
-    // // print_routes(best_initial_solution);
 
-    // float initial_cost = population.total_cost;
-    // cout << "------Start Genetic Algorithm------" << endl;
+    float initial_cost = population.total_cost;
+    cout << "------Start Genetic Algorithm------" << endl;
 
-    // int generation = 0;
-    // while (generation < generation_limit)
-    // {
-    //     selection(population);
-    //     crossover(vehicles, population);
-    //     mutation(vehicles, population);
+    int generation = 0;
+    while (generation < generation_limit)
+    {
+        selection(population);
+        crossover(vehicles, population);
+        mutation(vehicles, population);
 
-    //     cout << generation << endl;
-    //     generation++;
-    // }
+        cout << generation << endl;
+        generation++;
+    }
 
-    // cout << "------End Genetic Algorithm------" << endl;
-    // cout << "initial cost: " << initial_cost << endl;
-    // cout << "final cost: " << population.total_cost << endl;
+    cout << "------End Genetic Algorithm------" << endl;
+    cout << "initial cost: " << initial_cost << endl;
+    cout << "final cost: " << population.total_cost << endl;
 
-    // cout << endl
-    //      << endl;
-    // Solution best_solution = get_best_sol_from_current_pop(population);
+    cout << endl
+         << endl;
+    Solution best_solution = get_best_sol_from_current_pop(population);
 
-    // cout << "\n------End------" << endl;
+    cout << "\n------End------" << endl;
     end = chrono::system_clock::now();
     chrono::duration<double> elapsed_seconds = end - start;
-    // cout << "a durat: " << elapsed_seconds.count() << "s" << endl;
+    cout << "a durat: " << elapsed_seconds.count() << "s" << endl;
 
     // // Solution best_solution = generate_solution(graph, vehicles);
     // // print_routes(best_solution);
 
-    // cout << "best_cost: " << best_solution.cost << endl;
+    cout << "best_cost: " << best_solution.cost << endl;
 
     // // print_matrix();
-    // write_json_output_maps(best_solution, elapsed_seconds);
-    write_json_output_maps(generate_solution(graph, vehicles), elapsed_seconds);
+    write_json_output_maps(best_solution, elapsed_seconds);
+
+
+    // cout << "-----------------------------" << endl;
+
+    // cout<<best_solution.cost<<endl;
+    // cout<<best_solution.routes.size()<<endl;
+
+    // print_best_solution(population);
 
     return 0;
 }
